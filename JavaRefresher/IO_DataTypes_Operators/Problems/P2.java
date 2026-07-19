@@ -1,4 +1,4 @@
-package JavaRefresher.Class1.Problems;
+package JavaRefresher.IO_DataTypes_Operators.Problems;
 
 /*
 # Problem: Right-Aligned Star Triangle

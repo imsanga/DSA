@@ -1,4 +1,4 @@
-package JavaRefresher.Class1.Problems;
+package JavaRefresher.IO_DataTypes_Operators.Problems;
 
 /*
 # Problem: Star Pattern - Reverse Triangle
@@ -34,8 +34,10 @@ import java.util.*;
 
 public class P1 {
     public static void main(String[] args) {
-        for (int i = 5; i > 0; i--) {
-            for (int j = i; j > 0; j--) {
+        int n = 5;
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
