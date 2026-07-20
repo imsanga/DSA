@@ -39,21 +39,30 @@ import java.util.*;
 
 public class P2 {
     public static void main(String[] args) {
+        // row space star
+        // 1 4 1
+        // 2 3 2
+        // 3 2 3
+        // 4 1 4
+        // 5 0 5
+
+        // space => n-row
+        // star => row
+
         int n = 5;
 
-        for (int i = 1; i <= n; i++) {
-            // space
-            for (int j = n - i; j >= 1; j--) {
+        for (int rows = 1; rows <= n; rows++) {
+            // spaces
+            for (int spaces = 1; spaces <= n - rows; spaces++) {
                 System.out.print(" ");
             }
 
-            // star
-            for (int k = i; k >= 1; k--) {
+            // stars
+            for (int stars = 1; stars <= rows; stars++) {
                 System.out.print("*");
             }
 
             System.out.println();
         }
-
     }
 }

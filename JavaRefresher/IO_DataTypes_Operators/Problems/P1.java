@@ -34,13 +34,24 @@ import java.util.*;
 
 public class P1 {
     public static void main(String[] args) {
+        // row space star
+        // 1 0 5
+        // 2 0 4
+        // 3 0 3
+        // 2 0 2
+        // 1 0 1
+
+        // star => n-row+1
+
         int n = 5;
 
-        for (int i = n; i >= 1; i--) {
-            for (int j = 1; j <= i; j++) {
+        for (int row = 1; row <= n; row++) {
+            // stars
+            for (int stars = 1; stars <= n - row + 1; stars++) {
                 System.out.print("*");
             }
             System.out.println();
         }
+
     }
 }
