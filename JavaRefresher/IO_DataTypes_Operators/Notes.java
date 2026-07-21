@@ -4,6 +4,8 @@ package JavaRefresher.IO_DataTypes_Operators;
 
 import java.util.Scanner;
 
+import javax.accessibility.Accessible;
+
 public class Notes {
     public static void main(String[] args) {
 
@@ -174,6 +176,44 @@ public class Notes {
         // Ascii
         // A starts from 65
         // a starts from 97
+
+        // bigger type is the type of the result
+        // byte
+        // ↓
+        // short
+        // ↓
+        // char
+        // ↓
+        // int
+        // ↓
+        // long
+        // ↓
+        // float
+        // ↓
+        // double
+
+        // scope of variables
+        // 1. Local variable
+        // → Inside a method
+        // → Accessible only in that method
+
+        // 2. Block variable
+        // → Inside if/for/while
+        // → Accessible only inside that block
+
+        // 3. Instance variable
+        // → Belongs to an object
+        // → Accessible directly in non-static methods
+        // → Static methods need an object
+
+        // 4. Static variable
+        // → Belongs to the class
+        // → Accessible directly in both static and non-static methods
+
+        // break vs continue vs return
+        // break -> Exit the loop
+        // continue -> Skip the current iteration
+        // return -> Exit the method
 
     }
 }
