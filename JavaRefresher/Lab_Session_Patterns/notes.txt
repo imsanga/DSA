@@ -1,0 +1,7 @@
+formulas
+
+-> row
+-> n-row
+-> n-row+1
+-> 2*row - 1
+-> 2*(n-row)+1 -- inverted triangle
