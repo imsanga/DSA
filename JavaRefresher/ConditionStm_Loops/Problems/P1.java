@@ -1,4 +1,4 @@
-package JavaRefresher.ConditionStm_Loops;
+package JavaRefresher.ConditionStm_Loops.Problems;
 
 /*
 # Problem: Count Digits

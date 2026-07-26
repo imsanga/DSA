@@ -1,0 +1,232 @@
+Method (Function)
+
+Definition:
+A method is a block of code that performs a specific task.
+
+Syntax:
+returnType methodName(parameters) {
+    // code
+    return value;
+}
+
+void → Returns nothing
+return → Sends a value back to the caller
+
+*******************
+
+Arrays -- it is used to store multiple values of the same data type.
+---------
+1D Array
+---------
+• Stores data in a single row.
+• Syntax: 
+    int[] arr = new int[3];
+    int[] arr = new int[] {10,20,30};
+    int[] arr = {10,20,30};
+    int[] arr = new int[0]; // empty array
+• Access: arr[i]
+
+2D Array
+---------
+• Stores data in rows and columns.
+• Think of it as an array of arrays.
+• Syntax:
+      int[][] arr = {
+          {1,2,3},
+          {4,5,6}
+      };
+• Access: arr[row][column]
+
+Traversal
+---------
+1D  -> One loop
+2D  -> Nested loops
+
+*******************
+
+ArrayList
+---------
+• Dynamic array.
+• Size grows and shrinks automatically.
+• Stores objects (Integer, String, etc.).
+• Internally implemented using an array.
+
+Common Methods
+--------------
+add(element)
+get(index)
+set(index, value)
+remove(index)
+size()
+contains(element)
+clear()
+
+Traversal
+---------
+for loop
+for-each loop
+
+Array
+-----
+Fixed size
+length
+
+ArrayList
+---------
+Dynamic size
+size()
+
+2D ArrayList
+------------
+
+Definition:
+An ArrayList of ArrayLists.
+
+Syntax:
+ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
+
+Access:
+matrix.get(row).get(column)
+
+Add Row:
+matrix.add(new ArrayList<>());
+
+Add Element:
+matrix.get(row).add(value);
+
+Traversal:
+Two loops or nested for-each loops.
+
+*******************
+
+String
+------
+• Sequence of characters.
+• Immutable.
+• Uses double quotes.
+
+Declaration
+-----------
+String s = "Java";
+
+Important Methods
+-----------------
+length()
+charAt(i)
+substring()
+equals()
+contains()
+indexOf()
+toUpperCase()
+toLowerCase()
+startsWith()
+endsWith()
+
+Comparison
+----------
+==       -> compares references
+equals() -> compares content
+
+Traversal
+---------
+for(int i = 0; i < s.length(); i++) s.charAt(i);
+
+Remember
+--------
+Array: arr.length
+
+String: str.length()
+
+StringBuilder
+-------------
+• Mutable sequence of characters.
+• Used for frequent string modifications.
+• Faster than String for concatenation.
+
+Creation
+--------
+StringBuilder sb = new StringBuilder();
+
+Common Methods
+--------------
+append()
+insert()
+delete()
+deleteCharAt()
+replace()
+reverse()
+charAt()
+setCharAt()
+length()
+toString()
+
+Difference
+----------
+String        -> Immutable
+StringBuilder -> Mutable
+
+Use StringBuilder when:
+-----------------------
+✔ Repeated concatenation
+✔ String reversal
+✔ Character replacement
+✔ Building large strings efficiently
+
+*******************
+
+Hashing
+-------
+• Technique for fast searching.
+• Uses key-value pairs.
+• Average O(1) lookup.
+
+HashMap
+-------
+HashMap<Key, Value>
+
+Common Methods
+--------------
+put(key,value)
+get(key)
+remove(key)
+containsKey(key)
+containsValue(value)
+size()
+keySet()
+values()
+
+Applications
+------------
+✔ Frequency counting
+✔ Duplicate detection
+✔ Fast lookup
+✔ Caching
+✔ Counting characters
+✔ Two Sum problem
+
+HashSet
+-------
+• Stores unique elements.
+• Does not allow duplicates.
+• No indexes.
+• No guaranteed order.
+• Uses hashing internally.
+
+Common Methods
+--------------
+add()
+remove()
+contains()
+size()
+clear()
+
+Traversal
+---------
+for-each loop
+
+Applications
+------------
+✔ Remove duplicates
+✔ Detect duplicates
+✔ Fast lookup
+✔ Membership testing
