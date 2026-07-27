@@ -12,6 +12,16 @@ returnType methodName(parameters) {
 void → Returns nothing
 return → Sends a value back to the caller
 
+Benefits:
+* Code reuse
+* Better readability
+* Easier maintenance
+* Easier testing
+
+extras:
+* floor() → rounds down (towards negative infinity).
+* ceil() → rounds up (towards positive infinity).
+
 *******************
 
 Arrays -- it is used to store multiple values of the same data type.
