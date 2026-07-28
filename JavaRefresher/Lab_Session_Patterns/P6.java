@@ -67,7 +67,7 @@ public class P6 {
                 System.out.print("*");
             }
 
-            // stars
+            // spaces
             for (int k = 1; k <= i * 2 - 2; k++) {
                 System.out.print(" ");
             }

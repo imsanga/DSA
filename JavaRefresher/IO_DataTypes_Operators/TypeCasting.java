@@ -1,6 +1,6 @@
 package JavaRefresher.IO_DataTypes_Operators;
 
-// => Type casting - It is the process of converting one data type into another data type
+// Type casting - It is the process of converting one data type into another data type
 
 public class TypeCasting {
     public static void main(String[] args) {

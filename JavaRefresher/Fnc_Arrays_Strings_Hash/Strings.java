@@ -1,8 +1,8 @@
 package JavaRefresher.Fnc_Arrays_Strings_Hash;
 
-// => String - Group of characters enclosed within double quotes
+// String - Group of characters enclosed within double quotes
 
-// => String Immutability
+// String Immutability
 // --> String literals -- it is immutable - once object is created it's value cannot be changed, if want to change it creates a new object, existing object remains there in memory
 // --> StringBuilder -- it is mutable - if want to change it modifies the existing object
 

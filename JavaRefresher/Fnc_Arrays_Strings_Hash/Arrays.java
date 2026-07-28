@@ -1,6 +1,6 @@
 package JavaRefresher.Fnc_Arrays_Strings_Hash;
 
-// => Arrays - single variable can hold more than one value of same data type
+// Arrays - single variable can hold more than one value of same data type
 
 public class Arrays {
     public static void main(String[] args) {

@@ -35,15 +35,11 @@ public class Hashmap {
 
         // iterate with keys
         for (int x : l1.keySet())
-            System.out.println(x);
+            System.out.println(x + ":" + l1.get(x));
 
         // iterate with values
         for (String x : l1.values())
             System.out.println(x);
-
-        // iterate with entrySet
-        for (Map.Entry<Integer, String> x : l1.entrySet())
-            System.out.println(x.getKey() + " " + x.getValue());
 
     }
 }

@@ -52,6 +52,10 @@ Traversal
 1D  -> One loop
 2D  -> Nested loops
 
+note:
+--> transpose of matrix = columns * rows
+--> use .equals instead of == for wrapper classes
+
 *******************
 
 ArrayList
@@ -186,6 +190,7 @@ Use StringBuilder when:
 
 Hashing
 -------
+* Hashing allows you to store and retrieve data very quickly
 • Technique for fast searching.
 • Uses key-value pairs.
 • Average O(1) lookup.

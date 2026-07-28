@@ -1,6 +1,7 @@
 package JavaRefresher.Fnc_Arrays_Strings_Hash;
 
 // Set is an interface
+// HashSet is a class that implements Set
 // It stores elements in random order
 // duplicates not allowed
 

@@ -1,6 +1,6 @@
 package JavaRefresher.Fnc_Arrays_Strings_Hash;
 
-// => Functions - It is a block of code designed to perform specific tasks and it is executed when it is called
+// Functions - It is a block of code designed to perform specific tasks and it is executed when it is called
 
 // pass by value vs reference
 // --> pass by value

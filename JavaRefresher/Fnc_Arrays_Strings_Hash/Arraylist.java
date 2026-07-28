@@ -30,6 +30,9 @@ public class Arraylist {
         // size of arrlist
         System.out.println(arrlist.size());
 
+        // clears entire list
+        arrlist.clear();
+
         // for loop iteration
         for (int i = 0; i < arrlist.size(); i++) {
             System.out.println(arrlist.get(i));
