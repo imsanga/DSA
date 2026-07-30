@@ -34,14 +34,14 @@ A = [2, 3, 4, 2]
 
 public class P3 {
     public int solve(int[] A) {
-        int max = A[0];
-        int secondMax = -1;
+        int max = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
 
-        for (int i = 1; i < A.length; i++) {
+        for (int i = 0; i < A.length; i++) {
             if (A[i] >= max) {
                 secondMax = max;
                 max = A[i];
-            } else if (A[i] < max && A[i] > secondMax) {
+            } else if (A[i] > secondMax) {
                 secondMax = A[i];
             }
         }
