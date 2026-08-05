@@ -1,0 +1,9 @@
+-> servers have capability of running ~ 10^8 iteration in 1 second
+
+-> time = no of iterations / iteration per second
+
+N		Iteration		ExecutionTime
+10^7	10^7			10^7 / 10^8 => 0.1 secs
+10^8	10^8			10^8 / 10^8 => 1 secs
+10^9	10^9			10^9 / 10^8 => 10 secs
+10^18	10^18			10^18 / 10^8 => 317 years
