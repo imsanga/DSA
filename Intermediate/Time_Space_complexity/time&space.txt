@@ -7,3 +7,55 @@ N		Iteration		ExecutionTime
 10^8	10^8			10^8 / 10^8 => 1 secs
 10^9	10^9			10^9 / 10^8 => 10 secs
 10^18	10^18			10^18 / 10^8 => 317 years
+
+--------------
+-> Iteration - number of times a loop runs
+-> compare algorithms - number of iterations it takes
+-> Asymptotic Analysis - The technique used to analyze an algorithm's performance as the input size grows
+-> Big-O Notation - One notation used in asymptotic analysis to describe the upper bound (worst-case growth rate)
+
+--------------
+calculation of Big(O)
+-> calculate iterations based on input size
+-> ignore lower order terms (terms with the highest degree (highest power of n) are higher order terms, remaining all are lower order terms)
+-> ignore constant coefficients
+
+eg iteration: 100 * log base2 N + 2
+lower order term - 2
+constant coefficient - 100
+ans O(Iteration) - log base2 N
+
+--------------
+why we ignore lower order terms
+-> when the input is large comparing a lower order term will not majorily affect the growth of algorithm, so it is ignored.
+-> as the input increases, impact of lower order term decreases
+-> eg: 100 * log base2 N + 2 -- where adding 2 not majorily affect the growth of algorithm
+
+--------------
+why we ignore constant coefficients
+-> coefficients affects the execution time but not the growth of algorithm, so it is ignored.
+-> eg: 100 * log base2 N -- where multiplying 100 with log base2 N affects the execution time but not the growth of algorithm
+
+--------------
+comparison order (low to high)
+O(1)
+O(log N)
+O(√N)
+O(N)
+O(N log N)
+O(N√N)
+O(N²)
+O(N³)
+O(2^N)
+O(N!)
+O(N^N)
+
+--------------
+
+Drawbacks of Big-O:
+• Doesn't give exact execution time.
+• Ignores constant coefficients.
+• Ignores lower-order terms.
+• Focuses only on large input sizes.
+• Doesn't consider hardware/compiler effects.
+• Doesn't measure memory usage (space complexity).

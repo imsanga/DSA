@@ -1,0 +1,122 @@
+Maths Properties
+
+1. Inclusive Range [a, b]
+-------------------------
+Includes both a and b
+
+Example: [1, 10] = 1,2,3,4,5,6,7,8,9,10
+
+Number of elements: b - a + 1
+
+Example: [5, 15] = 15 - 5 + 1 => 11
+
+
+2. Exclusive Range (a, b)
+-------------------------
+Excludes both a and b
+
+Example: (1, 10) = 2,3,4,5,6,7,8,9
+
+Number of elements: b - a - 1
+
+Example: (1,10) = 10 - 1 - 1 => 8
+
+
+3. Half-Open Ranges (Very Important in Programming)
+---------------------------------------------------
+
+[a, b) Includes a, excludes b
+
+Example: [0,5) = 0,1,2,3,4
+
+Number of elements: b - a
+
+-----
+
+(a, b] Excludes a, includes b
+
+Example: (0,5] = 1,2,3,4,5
+
+Number of elements: b - a
+
+4. Sum of First n Natural Numbers
+---------------------------------
+1 + 2 + 3 + ... + n
+
+Formula: n(n + 1) / 2
+
+Example: n = 5 => 5 × 6 / 2 => 15
+
+5. Sum from a to b
+------------------
+a + (a+1) + (a+2) + (a+3)... + b
+
+eg: 5, 6, 7, 8, 9, 10
+a -- first term
+b -- last term(consider it has n)
+
+Formula: n(n + 1) / 2 - a(a-1) / 2
+
+6. Arithmetic Progression (AP)
+------------------------------
+
+Sequence: a, a+d, a+2d, a+3d ...
+eg: 5, 10, 15, 20, 25
+a - first term
+d - common difference
+
+Nth term(last term): a + (n-1)d
+
+Sum of first n terms: n/2 × [first term + last term]
+
+7. Geometric Progression (GP)
+-----------------------------
+
+Sequence: a, ar, ar², ar³ ...
+
+eg: 5, 10, 20, 40, 80
+a - first term
+r - common ratio
+
+Nth term: a × r^(n-1)
+
+Sum of first n terms: a(r^n - 1)/(r - 1)
+
+Condition: r ≠ 1 (If r = 1 -- Sum = a × n)
+
+
+8. Even/Odd Count
+-----------------
+
+1 to n (Integer division)
+
+Even numbers: n / 2
+
+Odd numbers: (n + 1) / 2
+
+
+9. Powers of 2
+--------------
+
+2^10 = 1024 ≈ 1000 --> 10^3
+2^10 = 10^3
+
+Useful:
+2^20 ≈ (2^10)^2 => (10^3)^2 => 10^6
+2^30 ≈ 10^9
+2^40 ≈ 10^12
+
+
+10. Number of Digits
+--------------------
+
+For decimal number n
+
+digits = floor(log10(n)) + 1
+
+Examples
+
+9      -> 1 digit
+10     -> 2 digits
+999    -> 3 digits
+1000   -> 4 digits
