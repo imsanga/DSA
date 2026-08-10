@@ -84,6 +84,9 @@ public class P3_optimised {
         int k = 2; // rotate
         int n = arr.length;
 
+        if (k > n)
+            k = k % n;
+
         // reverse fully
         reverse(arr, 0, n - 1);
 
