@@ -59,3 +59,64 @@ Drawbacks of Big-O:
 • Focuses only on large input sizes.
 • Doesn't consider hardware/compiler effects.
 • Doesn't measure memory usage (space complexity).
+
+--------------
+
+constraints:
+
+if 1<=N<=10^5
+--> log n
+log 10^5 = (10^3)^5/3
+         = (2^10)^5/3
+         = 2^50/3
+         = 16.66 ~ 17
+         = 10^1 --> works
+
+--> n log n
+10^5 log 10^5 = (10^3)^5/3
+         = (2^10)^5/3
+         = 2^50/3
+         = 16.66 ~ 17
+         = 10^5 * 10^1 = 10^6 --> works
+
+--> n^2 log n
+n^2 log 10^5 = (10^3)^5/3
+         = (2^10)^5/3
+         = 2^50/3
+         = 16.66 ~ 17
+         = 10^10 * 10^1 = 10^11 is > 10^8 --> not works
+
+--------------
+Amortized Time complexity
+* The average time of an operation over a sequence of operations, even if some individual operations are expensive
+* in most cases it will take O(1) and rest of cases it will take O(n)
+
+Example: ArrayList
+
+* Assume the initial capacity is 10.
+* The first 10 insertions take O(1) each.
+* When inserting the 11th element:
+    • A new larger array is created.
+    • Existing elements are copied to the new array.
+    • The new element is inserted.
+    • This insertion takes O(n).
+* Since resizing happens only occasionally, the amortized time
+  complexity of add() is O(1).
+
+--------------
+
+space complexity
+
+* It is the maximum space(worst case) that is utilised at any point in time during running the algorithm
+* we determine space complexity using Big O
+
+eg:
+func(int N) { // 4 bytes -- we ignore the parameter
+    int x = N; // 4 byte
+    int y = x * x; // 4 byte
+    long z = x + y; // 8 byte
+    int arr[N]; // 4 * N
+    long l [N] [N]; // 8 * N * N
+}
+
+8N^2 + 4 N + 16 => space complexity is O(N^2)

@@ -1,0 +1,25 @@
+==============================
+HOW TO APPROACH A PROBLEM
+==============================
+
+1. Read the question and constraints carefully.
+
+2. Formulate an idea and logic.
+
+3. Verify the correctness of the logic.
+
+4. Mentally develop a pseudocode (or write a rough pseudocode).
+
+5. Determine the Time Complexity (TC) based on the pseudocode.
+
+6. Assess whether the TC is feasible and won't result in a TLE.
+   - As a rule of thumb, the worst-case operations should generally be
+     around 10^7 to 10^8.
+
+7. If the TC is not feasible, re-evaluate and optimize the idea/logic.
+
+8. Otherwise, proceed to code the solution.
+
+9. Dry-run the solution with sample and edge test cases.
+
+10. Submit the solution.
