@@ -1,0 +1,44 @@
+problem 1:
+
+int a = 0;
+for (int i = 0; i < N; i++) {
+    for (int j = N; j > i; --j) {
+        a += i + j;
+    }
+}
+
+soln: O(N^2)
+
+----------------
+problem 2:
+
+public void solve() {
+    int i = 1;
+
+    while (i < n) {
+        int x = i;
+
+        while (x-- > 0) {
+            // O(1) operation
+        }
+
+        i++;
+    }
+}
+
+soln: O(N^2)
+
+----------------
+problem 3:
+
+int count = 0;
+
+while (N > 0) {
+    count++;
+    N /= 3;
+}
+
+soln: O(log(N)) {Base 3}
+note:
+--> If the variable decreases by a fixed amount (N--, N = N - 5), the complexity is O(N).
+--> If the variable decreases by a fixed factor (N = N/2, N = N/3, N = N/k), the complexity is O(log N).

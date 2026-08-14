@@ -1,4 +1,4 @@
-package Intermediate.Time_Space_complexity.Problems;
+package Intermediate.arrayBasics;
 /*
 # Problem: Rotate Array to the Right
 
@@ -35,6 +35,8 @@ K = 3
 
 // tc - O(N^2)
 // sc - O(1)
+
+/*
 public class P3 {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5, 6 };
@@ -58,12 +60,13 @@ public class P3 {
 
     }
 }
+*/
 
 // optimised approach
 // tc - O(N)
 // sc - O(1)
 
-public class P3_optimised {
+public class P3 {
     static void reverse(int[] arr, int i, int j) {
 
         while (i < j) {

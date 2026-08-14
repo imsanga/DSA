@@ -1,4 +1,4 @@
-package Intermediate.Time_Space_complexity.Problems;
+package Intermediate.prefixSum_carryForward;
 
 /*
 # Problem: Count "ag" Pairs
@@ -38,7 +38,7 @@ Pairs count : 8
 
 // tc - O(N^2)
 // sc - O(1)
-public class P6 {
+public class P3 {
     public static void main(String[] args) {
         String s = "bcaggaag";
         int pairsCount = 0;

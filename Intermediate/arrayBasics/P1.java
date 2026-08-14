@@ -1,4 +1,4 @@
-package Intermediate.Time_Space_complexity.Problems;
+package Intermediate.arrayBasics;
 
 /*
 # Problem: Print Factors and Count Them
@@ -34,6 +34,16 @@ Total Factors -> 8
 
 */
 
+/* 
+## calc:
+    i < = n/i
+    i^2 = n
+    √ on both sides
+    √i^2 = √n
+    i = √n
+*/
+
+// tc - √N
 public class P1 {
     public static void main(String[] args) {
         int n = 49, count = 0;

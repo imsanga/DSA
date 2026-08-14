@@ -1,4 +1,4 @@
-package Intermediate.Time_Space_complexity.Problems;
+package Intermediate.arrayBasics;
 
 /*
 # Problem: Reverse an Array

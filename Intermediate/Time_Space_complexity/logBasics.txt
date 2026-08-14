@@ -1,4 +1,4 @@
-logarithm - How many time we multiply with base to get the number
+logarithm - How many time the exponent is multiplied with the base to get the result
 
 formula
 -> b^x = y

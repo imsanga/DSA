@@ -1,4 +1,4 @@
-package Intermediate.Time_Space_complexity.Problems;
+package Intermediate.prefixSum_carryForward;
 
 /*
 # Problem: Range Sum Query (Brute Force)
@@ -51,7 +51,7 @@ query sum: 7 to 7 -> -9
 
 // tc - O(N^2)
 // sc - O(1)
-public class P4 {
+public class P1 {
     public static void main(String[] args) {
         int[] arr = { -3, 6, 2, 4, 5, 2, 8, -9, 3, 1 };
 

@@ -90,9 +90,9 @@ Condition: r ≠ 1 (If r = 1 -- Sum = a × n)
 
 1 to n (Integer division)
 
-Even numbers: n / 2
+no of Even numbers from 1 to n: n / 2
 
-Odd numbers: (n + 1) / 2
+no of Odd numbers from 1 to n: (n + 1) / 2
 
 
 9. Powers of 2

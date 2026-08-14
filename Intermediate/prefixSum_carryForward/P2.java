@@ -1,4 +1,4 @@
-package Intermediate.Time_Space_complexity.Problems;
+package Intermediate.prefixSum_carryForward;
 
 /*
 # Problem: Range Sum of Even Indexed Elements Using Prefix Sum
@@ -48,7 +48,7 @@ query sum: 3 to 3 -> 0
 // optimised approach
 // tc - O(N)
 // sc - O(1)
-public class P5 {
+public class P2 {
     public static void main(String[] args) {
         int[] arr = { 2, 3, 1, 6, 4, 5 };
         int n = arr.length;
