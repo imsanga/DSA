@@ -38,6 +38,9 @@ Pairs count : 8
 
 // tc - O(N^2)
 // sc - O(1)
+
+/*
+
 public class P3 {
     public static void main(String[] args) {
         String s = "bcaggaag";
@@ -59,10 +62,12 @@ public class P3 {
     }
 }
 
+*/
+
 // optimised approach
 // tc - O(N)
 // sc - O(1)
-public class P6 {
+public class P3 {
     public static void main(String[] args) {
         String s = "bcaggaag";
         int pairsCount = 0, countOfA = 0;

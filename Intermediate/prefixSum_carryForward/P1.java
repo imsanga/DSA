@@ -51,6 +51,8 @@ query sum: 7 to 7 -> -9
 
 // tc - O(N^2)
 // sc - O(1)
+
+/* 
 public class P1 {
     public static void main(String[] args) {
         int[] arr = { -3, 6, 2, 4, 5, 2, 8, -9, 3, 1 };
@@ -75,10 +77,12 @@ public class P1 {
     }
 }
 
+*/
+
 // optimised approach
 // tc - O(N)
 // sc - O(1)
-public class P4 {
+public class P1 {
     public static void main(String[] args) {
         int[] arr = { -3, 6, 2, 4, 5, 2, 8, -9, 3, 1 };
         int n = arr.length;

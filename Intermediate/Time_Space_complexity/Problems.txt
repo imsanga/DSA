@@ -42,3 +42,116 @@ soln: O(log(N)) {Base 3}
 note:
 --> If the variable decreases by a fixed amount (N--, N = N - 5), the complexity is O(N).
 --> If the variable decreases by a fixed factor (N = N/2, N = N/3, N = N/k), the complexity is O(log N).
+
+----------------
+problem 4:
+
+for (int i = 0; i < N; i++) {
+    for (int j = i; j < N; j++) {
+        break;
+    }
+}
+
+soln: O(N)
+
+----------------
+problem 5:
+
+int a = 0, i = N;
+
+while (i > 0) {
+    a += i;
+    i /= 2;
+}
+
+soln: O(log N)
+
+----------------
+problem 6:
+
+for (int i = 1; i <= n; i += 2) {
+    System.out.print(i);
+}
+
+soln: O(N)
+
+----------------
+problem 7:
+
+static void solve(int N, int M) {
+    for (int i = 1; i <= N; i++) {
+        if (N % i == 0)
+            System.out.println(i);
+    }
+
+    for (int i = 1; i <= M; i++) {
+        if (M % i == 0)
+            System.out.println(i);
+    }
+}
+
+soln: O(N+M)
+
+----------------
+problem 8:
+
+static int func(int n) {
+    int s = 0;
+
+    for (int i = 1; i <= 100; i++) {
+        s += i;
+    }
+
+    return s;
+}
+
+soln: O(1)
+
+----------------
+problem 9:
+
+static int func(int n) {
+    int s = 0;
+    for (int i = 0; i < n; i = i * 2) {
+        s += i;
+    }
+    return s;
+}
+
+soln: O(∞)
+
+----------------
+problem 10:
+
+for (int i = 1; i <= 100; i *= 2) {
+    for (int j = 1; j <= n; j++) {
+        System.out.print(i + j + " ");
+    }
+    System.out.println();
+}
+
+soln: O(n)
+
+----------------
+problem 11:
+
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j <= i; j++) {
+        System.out.print(i + j + " ");
+    }
+    System.out.println();
+}
+
+soln: O(n^2)
+
+----------------
+problem 12:
+
+for (int i = 1; i <= n; i *= 2) {
+    for (int j = 1; j <= n; j++) {
+        System.out.print(i + j + " ");
+    }
+    System.out.println();
+}
+
+soln: O(nlogn)

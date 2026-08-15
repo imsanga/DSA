@@ -123,3 +123,8 @@ func(int N) { // 4 bytes -- we ignore the parameter
 --------------
 Time complexity - how much time the given soln takes, we calculate it based on Big O
 Space complexity - how much space the given soln takes, we calculate it based on Big O
+
+--------------
+i=i*2 -> O(log N) {base2}
+i=i/3 -> O(log N) {base3}
+i=i/2 -> O(log N) {base2}
