@@ -1,0 +1,188 @@
+=========================================================
+PREFIX SUM & CARRY FORWARD
+=========================================================
+
+-------------------------
+1. CARRY FORWARD
+-------------------------
+
+Definition:
+Carry information from previous elements while traversing the array.
+
+Core Idea:
+Instead of recalculating previous answers, keep updating one running variable.
+
+Pattern:
+
+state = initialValue
+for each element => state = update(state, currentElement)
+
+Time Complexity: O(N)
+
+Space Complexity: O(1)
+
+Think Carry Forward When You See:
+✔ Maximum so far
+✔ Minimum so far
+✔ Best till now
+✔ Seen before
+✔ Exists before
+✔ Running answer
+✔ Running count
+✔ Running profit
+
+Common Problems:
+• Maximum till every index
+• Minimum till every index
+• Running count
+• Count positives till index
+• Stock Buy & Sell (minimum price so far)
+• Leaders in Array (Right → Left)
+• Rain Water Trapping (Left/Right Max arrays)
+• Longest increasing prefix
+• Prefix maximum/minimum
+
+Java Pattern:
+
+int state = initialValue;
+
+for (int i = 0; i < n; i++) {
+    state = update(state, arr[i]);
+}
+
+------------------------------------------------------
+
+-------------------------
+2. PREFIX SUM
+-------------------------
+
+Definition:
+Store cumulative sum till every index.
+
+Formula:
+
+prefix[i] = prefix[i-1] + arr[i]
+
+Meaning:
+
+prefix[i] = sum of elements from index 0 to i
+
+Example:
+
+Array:
+2 4 6 1 3
+
+Prefix:
+2 6 12 13 16
+
+Building Prefix:
+
+prefix[0] = arr[0];
+
+for(int i = 1; i < n; i++) prefix[i] = prefix[i-1] + arr[i];
+
+Time: O(N)
+
+Space: O(N)
+
+------------------------------------------------------
+
+Range Sum Query:
+
+Sum(L,R)
+
+If L == 0 => answer = prefix[R]
+
+Else answer = prefix[R] - prefix[L-1]
+
+Time:
+O(1)
+
+------------------------------------------------------
+
+Think Prefix Sum When You See:
+
+✔ Sum(L,R)
+✔ Multiple range queries
+✔ Continuous subarray sum
+✔ Cumulative sum
+✔ Running total
+✔ Frequency till index
+✔ Count in a range
+
+Common Problems:
+
+• Range Sum Query
+• Subarray Sum Equals K
+• Count Odd/Even in Range
+• Prefix Frequency Array
+• 2D Prefix Sum (Matrix)
+• Difference Array
+• Equilibrium Index
+• Pivot Index
+
+------------------------------------------------------
+
+Carry Forward vs Prefix Sum
+
+Carry Forward
+-------------
+• Uses one running variable
+• Running maximum
+• Running minimum
+• Running count
+• Running answer
+• Usually O(1) space
+
+Prefix Sum
+----------
+• Uses another array
+• Stores cumulative sums
+• Answers range sum queries
+• O(N) extra space
+• O(1) query time
+
+------------------------------------------------------
+
+Golden Rule:
+• Need previous information? → Carry Forward
+• Need fast range sums? → Prefix Sum
+• Need to avoid repeated calculations? → Preprocess first
+
+REMEMBER:
+Carry Forward = Running Information
+Prefix Sum = Running Sum
+=========================================================
+
+Problems
+---------
+
+--> sum of elements within the range
+// Sum(left, right)
+
+// tc - O(N)
+// sc - O(1)
+
+int[] arr = {1, 2, 3, 4, 5}
+
+// 1. create a prefix array
+int[] prefixArr = {1, 3, 6, 10, 15}
+
+// 2. query execution
+if(l == 0) sum => prefixArr[r]
+query range calculation for sum => prefixArr[r] - prefixArr[l-1]
+
+---------------
+
+--> sum of even indexed elements
+// tc - O(N)
+// sc - O(1)
+
+int[] arr = {1, 2, 3, 4, 5}
+
+// 1. create a even prefix array
+int[] prefixArr = {1, 1, 4, 4, 9}
+
+// 2. query execution
+if(l == 0) sum => prefixArr[r]
+query range calculation for sum => prefixArr[r] - prefixArr[l-1]

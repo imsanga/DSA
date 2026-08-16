@@ -1,4 +1,4 @@
-package Intermediate.prefixSum_carryForward;
+package Intermediate.prefixSum_carryForward.problems;
 
 /*
 # Problem: Range Sum Query (Brute Force)
@@ -83,39 +83,30 @@ public class P1 {
 // tc - O(N)
 // sc - O(1)
 public class P1 {
-    public static void main(String[] args) {
-        int[] arr = { -3, 6, 2, 4, 5, 2, 8, -9, 3, 1 };
-        int n = arr.length;
+    public long[] rangeSum(int[] A, int[][] B) {
 
-        int[][] query = {
-                { 4, 8 },
-                { 3, 7 },
-                { 1, 3 },
-                { 0, 4 },
-                { 7, 7 }
-        };
+        // prefix sum array
+        int n = A.length;
+        long[] pfxArr = new long[n];
 
-        // prefix array
-        int[] pfxArr = new int[n];
-
-        pfxArr[0] = arr[0];
-
-        for (int i = 1; i <= n - 1; i++) {
-            pfxArr[i] = pfxArr[i - 1] + arr[i];
+        pfxArr[0] = A[0];
+        for (int i = 1; i < n; i++) {
+            pfxArr[i] = pfxArr[i - 1] + A[i];
         }
 
         // query execution
-        for (int j = 0; j <= query.length - 1; j++) {
-            int start = query[j][0], end = query[j][1], sum;
+        int q = B.length;
+        long[] ans = new long[q];
+        for (int j = 0; j < q; j++) {
+            int left = B[j][0], right = B[j][1];
 
-            if (start == 0) {
-                sum = pfxArr[end];
+            if (left == 0) {
+                ans[j] = pfxArr[right];
             } else {
-                sum = pfxArr[end] - pfxArr[start - 1];
+                ans[j] = pfxArr[right] - pfxArr[left - 1];
             }
-
-            System.out.println("query sum: " + start + " to " + end + " -> " + sum);
         }
 
+        return ans;
     }
 }

@@ -1,4 +1,4 @@
-package Intermediate.prefixSum_carryForward;
+package Intermediate.prefixSum_carryForward.problems;
 
 /*
 # Problem: Range Sum of Even Indexed Elements Using Prefix Sum

@@ -1,4 +1,4 @@
-package Intermediate.prefixSum_carryForward;
+package Intermediate.prefixSum_carryForward.problems;
 
 /*
 # Problem: Count "ag" Pairs
@@ -32,7 +32,7 @@ S = "bcaggaag"
 
 ## Example Output
 
-Pairs count : 8
+Pairs count : 5
 
 */
 
@@ -68,20 +68,17 @@ public class P3 {
 // tc - O(N)
 // sc - O(1)
 public class P3 {
-    public static void main(String[] args) {
-        String s = "bcaggaag";
-        int pairsCount = 0, countOfA = 0;
+    public long solve(String A) {
+        int n = A.length();
+        long countOfA = 0, ans = 0;
 
-        for (int i = 0; i <= s.length() - 1; i++) {
-            if (s.charAt(i) == 'a')
+        for (int i = 0; i < n; i++) {
+            if (A.charAt(i) == 'A')
                 countOfA++;
-
-            else if (s.charAt(i) == 'g')
-                pairsCount += countOfA;
-
+            else if (A.charAt(i) == 'G')
+                ans += countOfA;
         }
 
-        System.out.println("Pairs count : " + pairsCount);
-
+        return ans;
     }
 }
