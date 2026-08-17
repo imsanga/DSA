@@ -1,90 +1,78 @@
 package Intermediate.prefixSum_carryForward.problems;
 
 /*
-# Problem: Range Sum of Even Indexed Elements Using Prefix Sum
+# Problem: Sum of Even Indexed Elements in a Range
 
 ## Problem Description
-Given an integer array and multiple range queries, find the sum of elements at even indices within each query range.
+Given:
+- An integer array A.
+- A list of range queries B, where each query is represented as [L, R].
 
-Use a prefix sum array that stores the cumulative sum of elements located only at even indices.
+For each query, calculate the sum of all elements in A that are present at even indices within the range [L, R].
 
 Note: Array indexing is 0-based.
 
 ---
 
 ## Input Format
-- The first input is an integer array.
-- The second input is a 2D integer array where each row represents a query [start, end].
+- The first input is an integer array A.
+- The second input is a 2D integer array B, where each row contains two integers [L, R].
 
 ---
 
 ## Output Format
-For each query, print the sum of elements present at even indices in the specified range.
+Return an integer array where each element represents the sum of elements at even indices for the corresponding query.
 
 ---
 
 ## Example Input
 
-Array = [2, 3, 1, 6, 4, 5]
+A = [2, 8, 3, 9, 15]
 
-Queries = [
-  [1, 3],
-  [2, 5],
-  [0, 4],
-  [3, 3]
+B = [
+  [1, 4],
+  [0, 2],
+  [2, 3]
 ]
 
 ---
 
 ## Example Output
 
-query sum: 1 to 3 -> 1
-query sum: 2 to 5 -> 5
-query sum: 0 to 4 -> 7
-query sum: 3 to 3 -> 0
+[18, 5, 3]
 
 */
 
-// optimised approach
-// tc - O(N)
-// sc - O(1)
+// tc - O(N+Q) -- O(N)
 public class P2 {
-    public static void main(String[] args) {
-        int[] arr = { 2, 3, 1, 6, 4, 5 };
-        int n = arr.length;
+    public int[] sumOfEvenIndexedElements(int[] A, int[][] B) {
+        int n = A.length;
+        int q = B.length;
+        int[] ansArr = new int[q];
 
-        int[][] query = {
-                { 1, 3 },
-                { 2, 5 },
-                { 0, 4 },
-                { 3, 3 }
-        };
+        // even prefixArr
+        int[] evenPfx = new int[n];
+        evenPfx[0] = A[0];
 
-        // even prefix array
-        int[] pfxArr = new int[n];
-
-        pfxArr[0] = arr[0];
-
-        for (int i = 1; i <= n - 1; i++) {
+        for (int i = 1; i < n; i++) {
             if (i % 2 == 0) {
-                pfxArr[i] = pfxArr[i - 1] + arr[i];
+                evenPfx[i] = evenPfx[i - 1] + A[i];
             } else {
-                pfxArr[i] = pfxArr[i - 1];
+                evenPfx[i] = evenPfx[i - 1];
             }
         }
 
-        // query execution
-        for (int j = 0; j <= query.length - 1; j++) {
-            int start = query[j][0], end = query[j][1], sum;
+        // query Execution
+        for (int j = 0; j < q; j++) {
+            int left = B[j][0], right = B[j][1];
 
-            if (start == 0) {
-                sum = pfxArr[end];
+            if (left == 0) {
+                ansArr[j] = evenPfx[right];
             } else {
-                sum = pfxArr[end] - pfxArr[start - 1];
+                ansArr[j] = evenPfx[right] - evenPfx[left - 1];
             }
-
-            System.out.println("query sum: " + start + " to " + end + " -> " + sum);
         }
 
+        return ansArr;
     }
 }
