@@ -22,8 +22,6 @@ package JavaRefresher.IO_DataTypes_Operators;
 
 import java.util.Scanner;
 
-import javax.accessibility.Accessible;
-
 public class Notes {
     public static void main(String[] args) {
 
