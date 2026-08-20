@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics;
+package Intermediate.arrayBasics.sorting;
 
 /*
 # Problem: Elements Removal
@@ -38,7 +38,7 @@ A = [2, 1]
 
 import java.util.Arrays;
 
-public class P6 {
+public class P2 {
     public int solve(int[] A) {
         int n = A.length;
 

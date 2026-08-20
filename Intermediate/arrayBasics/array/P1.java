@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics;
+package Intermediate.arrayBasics.array;
 
 /*
 # Problem: Print Factors and Count Them

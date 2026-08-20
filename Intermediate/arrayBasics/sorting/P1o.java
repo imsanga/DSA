@@ -1,11 +1,11 @@
-package Intermediate.arrayBasics;
+package Intermediate.arrayBasics.sorting;
 
 // noble integer - elements present before should be equal to the element
 
 // tc - O(nlogn + n) => O(nlogn)
 import java.util.*;
 /* 
-public class P5o {
+public class P1o {
     public static void main(String[] args) {
         int[] arr = { 1, -5, 3, 5, -10, 4 };
         int n = arr.length;
@@ -30,7 +30,7 @@ public class P5o {
 
 // with repeated elements
 
-public class P5o {
+public class P1o {
 
     public static void main(String[] args) {
         int[] arr = { 9, 3, 3, 1, 1, -2, 3, 3, 3 };

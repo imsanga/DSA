@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics;
+package Intermediate.arrayBasics.sorting;
 
 /*
 # Problem: Arithmetic Progression?
@@ -36,7 +36,7 @@ A = [3, 5, 1]
 
 import java.util.Arrays;
 
-public class P7 {
+public class P3 {
     public int solve(int[] A) {
 
         // sort asc

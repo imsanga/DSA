@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics;
+package Intermediate.arrayBasics.sorting;
 
 import java.util.Arrays;
 
@@ -34,7 +34,7 @@ A = [3, 2, 1, 3]
 
 */
 
-public class P5i {
+public class P1i {
     public int solve(int[] A) {
         int n = A.length;
 
