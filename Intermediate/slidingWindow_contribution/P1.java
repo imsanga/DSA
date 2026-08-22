@@ -80,7 +80,7 @@ public class P1 {
 
 */
 
-// tc - O(N) - carryForward
+// tc - O(N) - contribution technique
 public class P1 {
     public static void main(String[] args) {
         int[] arr = { 3, 2, 5 };

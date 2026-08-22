@@ -1,0 +1,12 @@
+ascii representation
+------------
+A -> 65
+a -> 97
+0 -> 48
+
+char[] → String
+new String(arr)
+
+String → char[]
+s.toCharArray()
+
