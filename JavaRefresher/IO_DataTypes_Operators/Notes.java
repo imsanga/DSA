@@ -66,7 +66,7 @@ public class Notes {
         // Sanga (single line comment)
 
         /*
-         * double line comments
+         * Multi line comments
          * Virat
          * Dhoni
          * Sachin
