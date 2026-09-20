@@ -126,15 +126,17 @@ String s = "Java";
 Important Methods
 -----------------
 length()
-charAt(i)
-substring()
-equals()
-contains()
-indexOf()
+charAt(index)
+substring(beginIndex)
+substring(beginIndex, endIndex)
+equals(anotherString)
+equalsIgnoreCase(anotherString)
+contains(str)
+indexOf(ch)
 toUpperCase()
 toLowerCase()
-startsWith()
-endsWith()
+startsWith(prefix)
+endsWith(suffix)
 
 Comparison
 ----------
@@ -163,14 +165,14 @@ StringBuilder sb = new StringBuilder();
 
 Common Methods
 --------------
-append()
-insert()
-delete()
-deleteCharAt()
-replace()
+append(value)
+insert(index, value)
+delete(startIndex, endIndex)
+deleteCharAt(index)
+replace(startIndex, endIndex, "text")
 reverse()
-charAt()
-setCharAt()
+charAt(index)
+setCharAt(index, 'c')
 length()
 toString()
 
@@ -191,13 +193,10 @@ Use StringBuilder when:
 Hashing
 -------
 * Hashing allows you to store and retrieve data very quickly
-• Technique for fast searching.
-• Uses key-value pairs.
-• Average O(1) lookup.
 
 HashMap
 -------
-HashMap<Key, Value>
+HashMap<Key, Value> // Uses key-value pairs
 
 Common Methods
 --------------

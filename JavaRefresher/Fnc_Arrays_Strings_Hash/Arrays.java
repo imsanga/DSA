@@ -4,6 +4,9 @@ package JavaRefresher.Fnc_Arrays_Strings_Hash;
 
 public class Arrays {
     public static void main(String[] args) {
+
+        // *** 1d array ***
+
         // array creation
         // int[] arr1 = new int[3];
         // int[] arr2 = new int[] { 1, 2, 3 };
@@ -21,7 +24,27 @@ public class Arrays {
         for (int i : arr)
             System.out.println(i);
 
-        // 2d array (array of arrays)
+        // *** 2d array (array of arrays) ***
+
+        // 1. Specify size
+        int[][] arr1 = new int[2][3];
+
+        // 2. Using new with values
+        int[][] arr2 = new int[][] {
+                { 1, 2, 3 },
+                { 4, 5, 6 }
+        };
+
+        // 3. Direct initialization
+        int[][] arr3 = {
+                { 1, 2, 3 },
+                { 4, 5, 6 }
+        };
+
+        // 4. Empty array
+        int[][] arr4 = new int[0][0];
+
+        // example
         int[][] arr2d = { { 1 }, { 1, 2 }, { 1, 2, 3 } };
 
         for (int i = 0; i < arr2d.length; i++) {

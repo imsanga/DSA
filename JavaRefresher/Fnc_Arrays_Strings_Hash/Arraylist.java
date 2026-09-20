@@ -70,7 +70,6 @@ public class Arraylist {
         for (ArrayList<Integer> list : list2d) {
             for (int ele : list) {
                 System.out.print(ele + " ");
-
             }
             System.out.println();
         }

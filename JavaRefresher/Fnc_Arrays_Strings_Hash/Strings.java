@@ -84,5 +84,10 @@ public class Strings {
         // .toString() converts any object to string object
         String convertSB = sb.toString();
         System.out.println(convertSB);
+
+        // traverse stringBuilder
+        for (int i = 0; i < sb.length(); i++) {
+            System.out.println(sb.charAt(i));
+        }
     }
 }

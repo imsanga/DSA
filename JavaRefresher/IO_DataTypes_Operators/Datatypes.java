@@ -23,12 +23,13 @@ public class Datatypes {
 
         // -2^63 to (2^63 - 1) -- 8byte
         // it can store upto 10^18
-        long d = 345787876;
+        // for integer literals default it takes as int, so declare L or l at end
+        long d = 345787876l;
         System.out.println("long -> " + d);
 
         // 4byte
         // 6 - 7 decimal digits of precision
-        // default it takes as double, so declare f at end
+        // for decimal literals default it takes as double, so declare F or f at end
         float e = 45.67f;
         // float e = (float) 45.67; //explicitly define float
         System.out.println("float -> " + e);
