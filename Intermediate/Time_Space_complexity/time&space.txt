@@ -22,23 +22,25 @@ N		Iteration		ExecutionTime
 
 --------------
 calculation of Big(O)
--> calculate iterations based on input size
--> ignore lower order terms (terms with the highest degree (highest power of n) are higher order terms, remaining all are lower order terms)
--> ignore constant coefficients
+1. Find the terms.
+2. Find the highest power of N.
+3. Ignore lower-order terms and constants.
+4. Ignore constant coefficients.
+5. The remaining highest-order term is the Big O.
 
 eg iteration: 100 * log base2 N + 2
-lower order term - 2
+constant - 2
 constant coefficient - 100
 ans --> Big O(Iteration) - log base2 N
 
 --------------
-why we ignore lower order terms
--> when the input is large comparing a lower order term will not majorily affect the growth of algorithm, so it is ignored.
+why we ignore lower order terms ?
+-> when the input is large, comparing a lower order term will not majorily affect the growth of algorithm, so it is ignored.
 -> as the input increases, impact of lower order term decreases
 -> eg: 100 * log base2 N + 2 -- where adding 2 not majorily affect the growth of algorithm
 
 --------------
-why we ignore constant coefficients
+why we ignore constant coefficients ? (constant coefficient is a number multiplied by a variable/term)
 -> coefficients affects the execution time but not the growth of algorithm, so it is ignored.
 -> eg: 100 * log base2 N -- where multiplying 100 with log base2 N affects the execution time but not the growth of algorithm
 
@@ -78,7 +80,6 @@ log 10^5 = (10^3)^5/3
 --> n log n
 10^5 log 10^5 = 10^5 * 10^1 = 10^6 --> works
 note: log 10^5 = 10^1
-         
 
 --> n^2 log n
 n^2 log 10^5 = (10^3)^5/3
@@ -125,6 +126,13 @@ Time complexity - how much time the given soln takes, we calculate it based on B
 Space complexity - how much space the given soln takes, we calculate it based on Big O
 
 --------------
-i=i*2 -> O(log N) {base2}
-i=i/3 -> O(log N) {base3}
-i=i/2 -> O(log N) {base2}
+Big O       Name
+
+O(1)        Constant
+O(log N)    Logarithmic
+O(N)        Linear
+O(N log N)  Linearithmic
+O(N²)       Quadratic
+O(N³)       Cubic
+O(2^N)      Exponential   
+O(N!)       Factorial
