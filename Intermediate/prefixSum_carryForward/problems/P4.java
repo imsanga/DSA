@@ -51,11 +51,11 @@ public class P4 {
         for (int i = 1; i < n; i++)
             pfxArr[i] = pfxArr[i - 1] + A[i];
 
-        // equilibrium index => sum of left + sum of right
+        // equilibrium index => sum of left == sum of right
         for (int j = 0; j < n; j++) {
-            int left = (j == 0) ? 0 : pfxArr[j - 1];
-            int right = pfxArr[n - 1] - pfxArr[j];
-            if (left == right)
+            int leftSum = (j == 0) ? 0 : pfxArr[j - 1];
+            int rightSum = (j == n - 1) ? 0 : pfxArr[n - 1] - pfxArr[j];
+            if (leftSum == rightSum)
                 return j;
         }
 

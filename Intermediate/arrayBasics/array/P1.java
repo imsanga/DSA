@@ -34,6 +34,7 @@ Total Factors -> 8
 
 */
 
+// tc - √N
 /* 
 ## calc:
     i < = n/i
@@ -42,15 +43,13 @@ Total Factors -> 8
     √i^2 = √n
     i = √n
 */
-
-// tc - √N
 public class P1 {
     public static void main(String[] args) {
         int n = 49, count = 0;
 
         System.out.print("Factors of " + n + " -> ");
 
-        for (int i = 1; i <= n / i; i++) {
+        for (int i = 1; i <= n / i; i++) { // i*i <= n
             if (n % i == 0) {
                 if (i == n / i) {
                     System.out.print(i + " ");
@@ -67,9 +66,3 @@ public class P1 {
 
     }
 }
-
-// i <= n/i
-// i*i <= n
-// i <= sqrt n
-
-// now sqrt 10^18 takes 10^9 which is 10 seconds

@@ -87,8 +87,7 @@ public class P3 {
         int k = 2; // rotate
         int n = arr.length;
 
-        if (k > n)
-            k = k % n;
+        k = k % n;
 
         // reverse fully
         reverse(arr, 0, n - 1);

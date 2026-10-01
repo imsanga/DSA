@@ -39,14 +39,15 @@ public class CarryForwardBasic {
 
     int[] arr = { 1, 10, 20, 15, 3, 5, 6, 80, 20, 4 };
     int n = arr.length;
-    int max = arr[0];
+    int[] maxArr = new int[n];
+
+    maxArr[0] = arr[0];
 
     for (int i = 1; i < n; i++) {
-      max = Math.max(arr[i], max);
-      arr[i] = max;
+      maxArr[i] = Math.max(maxArr[i - 1], arr[i]);
     }
 
-    System.out.println("Ans Array: " + Arrays.toString(arr));
+    System.out.println("Ans Array: " + Arrays.toString(maxArr));
 
   }
 }

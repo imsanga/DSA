@@ -4,6 +4,8 @@ package JavaRefresher.IO_DataTypes_Operators;
 // --> Primitive - Stores actual value (byte,short,int,long,float,double,char,boolean)
 // --> Reference - Stores address of object (arrays,strings,class,wrapperClass,interfaces)
 
+// literals - Literals are fixed values written directly in the code.
+
 public class Datatypes {
     public static void main(String[] args) {
         // 1 byte => 8 bits

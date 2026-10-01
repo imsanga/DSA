@@ -65,6 +65,9 @@ i² <= N → O(√N) || O(N^(1/2))
 i³ <= N → O(∛N) || O(N^(1/3))
 i^K <= N → O(ᵏ√N) || O(N^(1/K))
 
+* when base is dynamic, we use root on both sides
+* when exponent is dynamic, we use log on both sides
+
 --------------
 * Insertion/deletion at the beginning of an array is O(N), because the existing elements need to be shifted.
 

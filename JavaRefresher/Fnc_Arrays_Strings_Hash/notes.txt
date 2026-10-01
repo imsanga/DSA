@@ -198,6 +198,10 @@ HashMap
 -------
 HashMap<Key, Value> // Uses key-value pairs
 
+syntax
+-------
+HashMap<Integer, Integer> hm = new HashMap<>();
+
 Common Methods
 --------------
 put(key,value)
@@ -225,6 +229,10 @@ HashSet
 • No indexes.
 • No guaranteed order.
 • Uses hashing internally.
+
+syntax
+-------
+HashSet<Integer> hs = new HashSet<>();
 
 Common Methods
 --------------
