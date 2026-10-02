@@ -7,8 +7,6 @@ Carry information from previous elements while traversing the array.
 Core Idea:
 Instead of recalculating previous answers, keep updating one running variable.
 
-------------------------------------------------------
-
 2. PREFIX SUM
 -------------------------
 
@@ -36,8 +34,6 @@ Time: O(N)
 
 Space: O(N)
 
-------------------------------------------------------
-
 Think Prefix Sum When You See:
 
 ✔ Sum(L,R)
@@ -59,4 +55,3 @@ Common Problems:
 • Equilibrium Index
 • Pivot Index
 
-------------------------------------------------------

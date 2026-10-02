@@ -41,8 +41,11 @@ import java.util.ArrayList;
 public class P8 {
     public ArrayList<Integer> solve(ArrayList<Integer> A) {
         ArrayList<Integer> ansArr = new ArrayList<>();
-        int max = 0;
-        for (int i = A.size() - 1; i >= 0; i--) {
+
+        int n = A.size();
+        int max = A.get(n - 1);
+        ansArr.add(max);
+        for (int i = n - 2; i >= 0; i--) {
             if (A.get(i) > max) {
                 max = A.get(i);
                 ansArr.add(max);

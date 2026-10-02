@@ -1,6 +1,6 @@
 package Intermediate.prefixSum_carryForward;
 
-// sum all previous element till every index
+// sum of all previous element till every index
 
 // tc - O(N^2)
 /*

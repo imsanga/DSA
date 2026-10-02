@@ -82,7 +82,7 @@ public class P1 {
 // optimised approach
 // tc - O(N)
 // sc - O(1)
-public class P1 {
+public class P1a {
     public long[] rangeSum(int[] A, int[][] B) {
 
         // prefix sum array

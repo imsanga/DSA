@@ -7,47 +7,46 @@ public class P7 {
     public int solve(int[] A) {
         int n = A.length;
 
-        int[] evenPfx = new int[n];
-        int[] oddPfx = new int[n];
+        // prefix even & prefix odd
+        int[] pfxEven = new int[n];
+        int[] pfxOdd = new int[n];
 
-        evenPfx[0] = A[0];
-        oddPfx[0] = 0;
+        pfxEven[0] = A[0];
+        pfxOdd[0] = 0;
+
         for (int i = 1; i < n; i++) {
-            // even prefix array
             if (i % 2 == 0) {
-                evenPfx[i] = evenPfx[i - 1] + A[i];
+                pfxEven[i] = pfxEven[i - 1] + A[i];
             } else {
-                evenPfx[i] = evenPfx[i - 1];
+                pfxEven[i] = pfxEven[i - 1];
             }
 
-            // odd prefix Array
             if (i % 2 != 0) {
-                oddPfx[i] = oddPfx[i - 1] + A[i];
+                pfxOdd[i] = pfxOdd[i - 1] + A[i];
             } else {
-                oddPfx[i] = oddPfx[i - 1];
+                pfxOdd[i] = pfxOdd[i - 1];
             }
         }
 
+        // count special index
         int count = 0;
         for (int j = 0; j < n; j++) {
-            int even, odd;
-
+            int sumOfEven, sumOfOdd;
             if (j == 0) {
-                even = oddPfx[n - 1] - oddPfx[j];
-                odd = evenPfx[n - 1] - evenPfx[j];
+                sumOfEven = pfxOdd[n - 1] - pfxOdd[j];
+                sumOfOdd = pfxEven[n - 1] - pfxEven[j];
             } else if (j == n - 1) {
-                even = evenPfx[j - 1];
-                odd = oddPfx[j - 1];
+                sumOfEven = pfxEven[j - 1];
+                sumOfOdd = pfxOdd[j - 1];
             } else {
-                even = evenPfx[j - 1] + oddPfx[n - 1] - oddPfx[j];
-                odd = oddPfx[j - 1] + evenPfx[n - 1] - evenPfx[j];
+                sumOfEven = pfxEven[j - 1] + (pfxOdd[n - 1] - pfxOdd[j]);
+                sumOfOdd = pfxOdd[j - 1] + (pfxEven[n - 1] - pfxEven[j]);
             }
 
-            if (even == odd)
+            if (sumOfEven == sumOfOdd)
                 count++;
         }
 
         return count;
-
     }
 }

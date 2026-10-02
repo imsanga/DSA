@@ -35,18 +35,18 @@ public class P11 {
     public int solve(int[] A) {
         int n = A.length;
 
-        // min and max in array
+        // min and max element in array
         int min = A[0], max = A[0];
         for (int i = 1; i < n; i++) {
-            min = Math.min(A[i], min);
-            max = Math.max(A[i], max);
+            min = Math.min(min, A[i]);
+            max = Math.max(max, A[i]);
         }
 
-        // prefix min and max array
+        // prefix min and prefix max
         int[] pfxMin = new int[n];
         int[] pfxMax = new int[n];
-        pfxMax[0] = A[0] == max ? 0 : -1;
-        pfxMin[0] = A[0] == min ? 0 : -1;
+        pfxMin[0] = (A[0] == min) ? 0 : -1;
+        pfxMax[0] = (A[0] == max) ? 0 : -1;
 
         for (int j = 1; j < n; j++) {
             if (A[j] == min) {
@@ -62,12 +62,12 @@ public class P11 {
             }
         }
 
-        // closestMinMax
+        // find closestMinMax
         int closestMinMax = n;
         for (int k = 0; k < n; k++) {
             if (pfxMin[k] != -1 && pfxMax[k] != -1) {
-                int subArr = k - Math.min(pfxMin[k], pfxMax[k]) + 1;
-                closestMinMax = Math.min(subArr, closestMinMax);
+                int temp = k - Math.min(pfxMin[k], pfxMax[k]) + 1;
+                closestMinMax = Math.min(closestMinMax, temp);
             }
         }
 
