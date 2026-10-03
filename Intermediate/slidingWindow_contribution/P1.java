@@ -82,15 +82,14 @@ public class P1 {
 
 // tc - O(N) - contribution technique
 public class P1 {
-    public static void main(String[] args) {
-        int[] arr = { 3, 2, 5 };
-        int n = arr.length;
+    public long subarraySum(int[] A) {
+        int n = A.length;
+        long sum = 0;
 
-        int totalSubarraySum = 0;
         for (int i = 0; i < n; i++) {
-            totalSubarraySum += arr[i] * (i + 1) * (n - i);
+            sum += A[i] * ((long) (i + 1) * (n - i));
         }
 
-        System.out.println("Total subarray sum is: " + totalSubarraySum);
+        return sum;
     }
 }

@@ -35,16 +35,16 @@ public class P2 {
 
         int sum = 0;
 
-        // sum from 0 -> n-k
-        for (int i = 0; i < n - k; i++)
+        // sum from 0 -> k
+        for (int i = 0; i < k; i++)
             sum += arr[i];
 
         // iterate the array
-        int maxSubarraySum = sum, endIndex = k;
+        int maxSubarraySum = sum;
         for (int j = 1; j < n - k + 1; j++) {
-            sum = sum - arr[j - 1] + arr[endIndex];
+            sum = sum - arr[j - 1] + arr[j + k - 1];
+            // if(sum > maxSubarraySum) maxSubarraySum = sum;
             maxSubarraySum = Math.max(sum, maxSubarraySum);
-            endIndex++;
         }
 
         System.out.println("max subarray with length k is: " + maxSubarraySum);
