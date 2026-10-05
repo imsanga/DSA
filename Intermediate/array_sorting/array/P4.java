@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics.array;
+package Intermediate.array_sorting.array;
 
 /*
 # Problem: Sum of Maximum and Minimum Elements

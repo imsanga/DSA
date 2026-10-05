@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics.TwoDarr;
+package Intermediate.TwoDarr;
 
 /*
 # Problem: Print Diagonals of a Square Matrix

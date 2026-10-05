@@ -1,4 +1,4 @@
-package Intermediate.stringBasics;
+package Intermediate.string;
 
 /*
 # Problem: Check if a Substring is a Palindrome

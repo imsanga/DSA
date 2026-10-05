@@ -1,4 +1,4 @@
-package Intermediate.stringBasics;
+package Intermediate.string;
 
 /*
 # Problem: Toggle Case

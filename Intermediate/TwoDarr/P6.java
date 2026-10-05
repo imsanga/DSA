@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics.TwoDarr;
+package Intermediate.TwoDarr;
 
 /*
 # Problem: Matrix Transpose

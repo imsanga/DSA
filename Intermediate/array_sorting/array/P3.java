@@ -1,4 +1,5 @@
-package Intermediate.arrayBasics.array;
+package Intermediate.array_sorting.array;
+
 /*
 # Problem: Rotate Array to the Right
 

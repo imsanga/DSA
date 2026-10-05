@@ -1,0 +1,87 @@
+1. STACK
+--------
+LIFO data structure.
+Insertion and deletion happen from the top.
+
+2. CALL STACK
+-------------
+Used to manage method calls during program execution.
+Each method call creates a stack frame, When the method returns, its frame is removed.
+
+3. STACK FRAME
+--------------
+Memory/execution area created for one method call.
+Contains method parameters, local variables and return/execution information.
+
+4. HEAP
+-------
+Memory area where reference datatypes are created/stored.
+
+5. REFERENCE
+------------
+A variable that refers to an object in the heap.
+
+6. STACK vs HEAP
+----------------
+Memory Model
+Stack memory - stores primitive data type values and references of objects
+Heap memory - stores the actual objects and their data
+
+STACK:
+- Method execution
+- Stack frames
+- Local variables
+- References
+
+HEAP:
+- strings
+- Arrays
+- ArrayList
+- class
+- interface
+- wrapper class
+
+7. METHOD CALL
+--------------
+Calling a method:
+main()
+ ↓
+method()
+ ↓
+new stack frame
+ ↓
+method executes
+ ↓
+return
+ ↓
+stack frame removed
+
+8. LOCAL VARIABLE
+-----------------
+Variable declared inside a method/block.
+
+Example:
+void fun() {
+    int x = 10;
+}
+
+9. PASS-BY-VALUE
+----------------
+Java is pass-by-value.
+A copy of the value is passed to a method.
+
+10. ARRAY PASSING
+-----------------
+Java passes the array reference by value.
+Both references can point to the same heap array.
+
+Therefore:
+a[0] = 50 // can modify the original array.
+
+11. ARRAY REFERENCE REASSIGNMENT
+--------------------------------
+int[] a = new int[3]; // original array
+a = new int[5]; // modified inside method
+
+array created inside method - points to different address.
+original array points to initial address.

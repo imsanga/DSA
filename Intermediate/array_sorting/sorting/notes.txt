@@ -1,0 +1,17 @@
+Sorting
+-> It is the process of arranging data in a particular order based on a chosen parameter (such as ascending or descending order).
+
+Java Inbuilt Functions
+
+Primitive int[]:
+ascending -> Arrays.sort(arr)
+descending -> sort + manually reverse
+
+Integer[]:
+ascending -> Arrays.sort(arr)
+descending -> Arrays.sort(arr, Collections.reverseOrder())
+    
+ArrayList / List:
+ascending  → Collections.sort(al) || al.sort(null)
+descending → al.sort(Collections.reverseOrder()) || Collections.sort(al, Collections.reverseOrder())
+

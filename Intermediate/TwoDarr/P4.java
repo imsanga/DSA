@@ -1,4 +1,4 @@
-package Intermediate.arrayBasics.TwoDarr;
+package Intermediate.TwoDarr;
 
 // print all diagonal from left to right
 
