@@ -40,58 +40,60 @@ A = [
 
 */
 
-// tc
-// n * (m+m) + m * (n+n) + n*m
-// n*2m + m*2n + n*m
-// 2mn + 2mn + mn
-// 5mn
-// mn
-// O(N*M)
+/*
+    tc: O(M*N)
+    m*(n+n) + n*(m+m) + m*n
+    mn+mn+nm+nm+mn
+    5mn
+    mn
+*/
 
 public class P5 {
     public int[][] solve(int[][] A) {
-        int n = A.length;
-        int m = A[0].length;
+        int m = A.length; // no of rows
+        int n = A[0].length; // no of cols
 
-        // row wise if find 0 turn remaing elements to -1
-        for (int i = 0; i < n; i++) {
-            int flag = 0;
-            for (int j = 0; j < m; j++) {
-                if (A[i][j] == 0) {
-                    flag = 1;
-                    break;
-                }
-            }
-
-            if (flag == 1) {
-                for (int k = 0; k < m; k++) {
-                    if (A[i][k] != 0)
-                        A[i][k] = -1;
-                }
-            }
-        }
-
-        // column wise if find 0 turn remaing elements to -1
+        // check row wise 0, if present change it to -1
         for (int i = 0; i < m; i++) {
-            int flag = 0;
+            boolean flag = false;
             for (int j = 0; j < n; j++) {
-                if (A[j][i] == 0) {
-                    flag = 1;
+                if (A[i][j] == 0) {
+                    flag = true;
                     break;
                 }
             }
 
-            if (flag == 1) {
+            if (flag) {
                 for (int k = 0; k < n; k++) {
-                    if (A[k][i] != 0)
-                        A[k][i] = -1;
+                    if (A[i][k] != 0) {
+                        A[i][k] = -1;
+                    }
                 }
             }
         }
 
-        // now where all -1 is present, change it to 0
+        // check column wise 0, if present change it to -1
         for (int i = 0; i < n; i++) {
+            boolean flag = false;
             for (int j = 0; j < m; j++) {
+                if (A[j][i] == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (flag) {
+                for (int k = 0; k < m; k++) {
+                    if (A[k][i] != 0) {
+                        A[k][i] = -1;
+                    }
+                }
+            }
+        }
+
+        // change -1 to 0
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 if (A[i][j] == -1) {
                     A[i][j] = 0;
                 }

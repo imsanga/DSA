@@ -1,8 +1,51 @@
 package Intermediate.TwoDarr;
 
-// print all diagonal from left to right
+// print all diagonals from right to left
 
-// tc - O(N*M)
+/*
+
+public class Solution {
+    public int[][] diagonal(int[][] A) {
+
+        int m = A.length;
+        int n = A[0].length;
+
+        int[][] ans = new int[2*m-1][n];
+        int M = 0;
+
+        // 1st half
+        for(int i = 0; i < n; i++) {
+            int row = 0, col = i, N = 0;
+
+            while(row < m && col >= 0) {
+                ans[M][N] = A[row][col];
+                row++;
+                col--;
+                N++;
+            }
+            M++;
+        }
+
+        // 2nd half
+        for(int i = 1; i < m; i++) {
+            int row = i, col = n-1, N = 0;
+
+            while(row < m && col >= 0) {
+                ans[M][N] = A[row][col];
+                row++;
+                col--;
+                N++;
+            }
+            M++;
+        }
+
+        return ans;
+    }
+}
+
+*/
+
+// tc - O(M*N)
 public class P4 {
     public static void main(String[] args) {
         int[][] mat = {
@@ -11,32 +54,30 @@ public class P4 {
                 { 9, 10, 11, 12 }
         };
 
-        int n = mat.length;
-        int m = mat[0].length;
+        int m = mat.length; // no of rows
+        int n = mat[0].length; // no of columns
 
-        // print diagonals 1st part
-        for (int i = 0; i < m; i++) {
-            int start = 0;
-            int end = i;
+        // 1st half of matrix
+        for (int i = 0; i < n; i++) {
+            int row = 0, col = i;
 
-            while (start < n && end >= 0) {
-                System.out.print(mat[start][end] + " ");
-                start++;
-                end--;
+            while (row < m && col >= 0) {
+                System.out.print(mat[row][col] + " ");
+                row++;
+                col--;
             }
 
             System.out.println();
         }
 
-        // print diagonals 2nd part
-        for (int i = 1; i < n; i++) {
-            int start = i;
-            int end = m - 1;
+        // 2nd half of matrix
+        for (int i = 1; i < m; i++) {
+            int row = i, col = n - 1;
 
-            while (start < n && end >= 0) {
-                System.out.print(mat[start][end] + " ");
-                start++;
-                end--;
+            while (row < m && col >= 0) {
+                System.out.print(mat[row][col] + " ");
+                row++;
+                col--;
             }
 
             System.out.println();

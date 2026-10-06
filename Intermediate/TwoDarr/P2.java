@@ -39,18 +39,19 @@ A = [
 // tc - O(N^2)
 public class P2 {
     public int[] solve(int[][] A) {
-        int noOfcolumns = A[0].length;
-        int[] ansArr = new int[noOfcolumns];
+        int rows = A.length;
+        int cols = A[0].length;
 
         // column wise sum
-        for (int i = 0; i < A[0].length; i++) {
+        int[] ans = new int[cols];
+        for (int i = 0; i < cols; i++) {
             int sum = 0;
-            for (int j = 0; j < A.length; j++) {
+            for (int j = 0; j < rows; j++) {
                 sum += A[j][i];
             }
-            ansArr[i] = sum;
+            ans[i] = sum;
         }
 
-        return ansArr;
+        return ans;
     }
 }
