@@ -37,23 +37,25 @@ hELLO
 */
 
 /* 
-public class P1 {
+
+public class Solution {
     public String solve(String A) {
-        
+        // using char[]
+        int n = A.length();
         char[] ans = new char[n];
+        // char[] ans = A.toCharArray();
 
         for(int i = 0; i < n; i++) {
             char ch = A.charAt(i);
-            if(ch >= 'A' && ch <= 'Z') {
-               ans[i] = (char) (ch + 32);
-            }
-            else if(ch >= 'a' && ch <= 'z') {
-               ans[i] = (char) (ch - 32);
+            if (ch >= 'A' && ch <= 'Z') {
+                ans[i] = (char) (ch + 32);
+            } else {
+                ans[i] = (char) (ch - 32);
             }
         }
 
         return new String(ans);
-
+        // return String.valueOf(ans);
     }
 }
 
@@ -61,17 +63,14 @@ public class P1 {
 
 public class P1 {
     public String solve(String A) {
-        int n = A.length();
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < n; i++) {
-            char ch = A.charAt(i);
+        // using StringBuilder
+        StringBuilder sb = new StringBuilder(A);
+        for (int i = 0; i < sb.length(); i++) {
+            char ch = sb.charAt(i);
             if (ch >= 'A' && ch <= 'Z') {
-                char temp = (char) (ch + 32);
-                sb.append(temp);
-            } else if (ch >= 'a' && ch <= 'z') {
-                char temp = (char) (ch - 32);
-                sb.append(temp);
+                sb.setCharAt(i, (char) (ch + 32));
+            } else {
+                sb.setCharAt(i, (char) (ch - 32));
             }
         }
 

@@ -6,7 +6,8 @@ a -> 97
 
 char[] → String
 new String(arr)
+String.valueOf(arr)
 
 String → char[]
-s.toCharArray()
+str.toCharArray()
 

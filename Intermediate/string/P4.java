@@ -46,24 +46,22 @@ public class P4 {
         sb.append(A);
 
         // Delete all the uppercase letters
-        int n = sb.length();
-        StringBuilder sbDelete = new StringBuilder();
-        for (int i = 0; i < n; i++) {
+        StringBuilder ans = new StringBuilder();
+        for (int i = 0; i < sb.length(); i++) {
             if (sb.charAt(i) >= 'a' && sb.charAt(i) <= 'z') {
-                sbDelete.append(sb.charAt(i));
+                ans.append(sb.charAt(i));
             }
         }
 
         // Replace each vowel with '#'
-        for (int i = 0; i < sbDelete.length(); i++) {
-            if (sbDelete.charAt(i) == 'a' || sbDelete.charAt(i) == 'e'
-                    || sbDelete.charAt(i) == 'i' || sbDelete.charAt(i) == 'o'
-                    || sbDelete.charAt(i) == 'u') {
-                sbDelete.setCharAt(i, '#');
+        for (int i = 0; i < ans.length(); i++) {
+            if (ans.charAt(i) == 'a' || ans.charAt(i) == 'e' ||
+                    ans.charAt(i) == 'i' || ans.charAt(i) == 'o' ||
+                    ans.charAt(i) == 'u') {
+                ans.setCharAt(i, '#');
             }
         }
 
-        return sbDelete.toString();
-
+        return ans.toString();
     }
 }
