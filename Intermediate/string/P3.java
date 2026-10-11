@@ -39,62 +39,51 @@ A = "aaaabaaa"
 // tc - O(N^2)
 public class P3 {
     public String longestPalindrome(String A) {
-
         int n = A.length();
-        int maxlength = 0, length = 0;
-        String temp;
+        int maxLength = 0, tempLeft = 0, tempRight = n + 1;
 
-        StringBuilder sb = new StringBuilder();
-
+        // 1 center
         for (int i = 0; i < n; i++) {
-
-            // odd center
-            int left = i;
-            int right = i;
+            int left = i, right = i;
 
             while (left >= 0 && right < n) {
                 if (A.charAt(left) != A.charAt(right))
                     break;
-
                 else {
-                    length = right - left + 1;
-                    if (length > maxlength) {
-                        sb.delete(0, sb.length() + 1);
-                        maxlength = length;
-                        temp = A.substring(left, right + 1);
-                        sb.append(temp);
+                    int length = right - left + 1;
+                    if (length > maxLength) {
+                        maxLength = length;
+                        tempLeft = left;
+                        tempRight = right + 1;
                     }
-
-                    left--;
-                    right++;
                 }
+
+                left--;
+                right++;
             }
-
-            // even center
-            left = i;
-            right = i + 1;
-
-            while (left >= 0 && right < n) {
-                if (A.charAt(left) != A.charAt(right))
-                    break;
-
-                else {
-                    length = right - left + 1;
-                    if (length > maxlength) {
-                        sb.delete(0, sb.length() + 1);
-                        maxlength = length;
-                        temp = A.substring(left, right + 1);
-                        sb.append(temp);
-                    }
-
-                    left--;
-                    right++;
-                }
-            }
-
         }
 
-        return sb.toString();
+        // 2 center
+        for (int i = 0; i < n - 1; i++) {
+            int left = i, right = i + 1;
 
+            while (left >= 0 && right < n) {
+                if (A.charAt(left) != A.charAt(right))
+                    break;
+                else {
+                    int length = right - left + 1;
+                    if (length > maxLength) {
+                        maxLength = length;
+                        tempLeft = left;
+                        tempRight = right + 1;
+                    }
+                }
+
+                left--;
+                right++;
+            }
+        }
+
+        return A.substring(tempLeft, tempRight);
     }
 }
