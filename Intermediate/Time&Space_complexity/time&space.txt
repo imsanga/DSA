@@ -110,8 +110,11 @@ space complexity
 * It is the maximum space(worst case) that is utilised at any point in time during running the algorithm
 * we determine space complexity using Big O
 
+Total Space complexity: Total memory used by the algorithm, including input and auxiliary memory
+Auxiliary space complexity: Extra memory used by the algorithm, excluding the input.
+
 eg:
-func(int N) { // 4 bytes -- we ignore the parameter
+func(int N, int[] arr) { // 4 bytes + 4*N -- we ignore the parameter
     int x = N; // 4 byte
     int y = x * x; // 4 byte
     long z = x + y; // 8 byte
@@ -119,7 +122,8 @@ func(int N) { // 4 bytes -- we ignore the parameter
     long l [N] [N]; // 8 * N * N
 }
 
-8N^2 + 4 N + 16 => space complexity is O(N^2)
+8N^2 + 4 N + 16 => auxiliary space complexity is O(N^2)
+8N^2 + 8 N + 16 => total space complexity is O(N^2)
 
 --------------
 Time complexity - how much time the given soln takes, we calculate it based on Big O

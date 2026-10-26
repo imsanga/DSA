@@ -81,7 +81,7 @@ public class P1 {
 */
 
 // tc - O(N) - contribution technique
-public class P1 {
+public class Contribution {
     public long subarraySum(int[] A) {
         int n = A.length;
         long sum = 0;

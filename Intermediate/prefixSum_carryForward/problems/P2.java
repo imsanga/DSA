@@ -43,7 +43,8 @@ B = [
 
 */
 
-// tc - O(N+Q) -- O(N)
+// tc - O(N+Q)
+// sc - O(N)
 public class P2 {
     public int[] sumOfEvenIndexedElements(int[] A, int[][] B) {
         int n = A.length;

@@ -41,13 +41,14 @@ public class P9 {
     public int maxProfit(final int[] A) {
         int n = A.length;
 
-        if (n < 2)
+        if (n <= 1)
             return 0;
 
         int maxPft = 0;
         int min = A[0];
         for (int i = 1; i < n; i++) {
-            maxPft = Math.max(maxPft, A[i] - min);
+            int profit = A[i] - min;
+            maxPft = Math.max(maxPft, profit);
             min = Math.min(min, A[i]);
         }
 

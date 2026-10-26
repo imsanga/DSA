@@ -12,6 +12,13 @@ In each operation, you can remove either:
 
 Return the maximum possible sum of the B removed elements.
 
+NOTE: Suppose B = 3, and array A contains 10 elements, then you can:
+
+Remove 3 elements from front and 0 elements from the back, OR
+Remove 2 elements from front and 1 element from the back, OR
+Remove 1 element from front and 2 elements from the back, OR
+Remove 0 elements from front and 3 elements from the back.
+
 ---
 
 ## Input Format

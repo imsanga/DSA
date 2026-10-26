@@ -28,8 +28,8 @@ public class P1b {
         // prefix Sum array
         long[] pfxSum = new long[n + 1];
         pfxSum[0] = 0;
-        for (int i = 1; i <= n; i++) {
-            pfxSum[i] = pfxSum[i - 1] + arr[i - 1];
+        for (int i = 0; i < n; i++) {
+            pfxSum[i + 1] = pfxSum[i] + arr[i];
         }
 
         int nb = query.length;

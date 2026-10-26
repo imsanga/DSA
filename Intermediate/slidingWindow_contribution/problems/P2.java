@@ -1,4 +1,4 @@
-package Intermediate.slidingWindow_contribution;
+package Intermediate.slidingWindow_contribution.problems;
 
 /*
 # Problem: Maximum Subarray Easy
@@ -68,7 +68,7 @@ C = [2, 2, 2]
 */
 
 // tc: O(N^2)
-public class P4 {
+public class P2 {
     public int maxSubarray(int A, int B, int[] C) {
 
         int maxSubarraySum = 0;

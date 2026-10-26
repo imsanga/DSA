@@ -27,7 +27,7 @@ public class P2 {
 */
 
 // tc - O(N) -- sliding window technique
-public class P2 {
+public class SlidingWindow {
     public static void main(String[] args) {
         int[] arr = { -3, 4, -2, 5, 3, -2, 8, 2, -1, 4 };
         int n = arr.length;

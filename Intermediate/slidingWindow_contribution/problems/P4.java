@@ -1,4 +1,4 @@
-package Intermediate.slidingWindow_contribution;
+package Intermediate.slidingWindow_contribution.problems;
 
 /*
 # Problem: Counting Subarrays Easy
@@ -61,7 +61,7 @@ B = 10
 */
 
 // tc: O(N^2)
-public class P6 {
+public class P4 {
     public int solve(int[] A, int B) {
         int n = A.length;
         int count = 0;

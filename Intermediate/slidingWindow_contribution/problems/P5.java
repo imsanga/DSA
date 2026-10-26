@@ -1,4 +1,4 @@
-package Intermediate.slidingWindow_contribution;
+package Intermediate.slidingWindow_contribution.problems;
 
 /*
 # Problem: Good Subarrays Easy
@@ -62,7 +62,7 @@ B = 65
 
 */
 
-public class P7 {
+public class P5 {
     public int solve(int[] A, int B) {
         int n = A.length;
         int countGoodSubArr = 0;

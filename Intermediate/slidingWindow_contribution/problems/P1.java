@@ -1,4 +1,4 @@
-package Intermediate.slidingWindow_contribution;
+package Intermediate.slidingWindow_contribution.problems;
 
 /*
 # Problem: Subarray with Given Sum and Length
@@ -66,7 +66,7 @@ C = 6
 */
 
 // tc: O(N)
-public class P3 {
+public class P1 {
     public int solve(int[] A, int B, int C) {
         int n = A.length;
 

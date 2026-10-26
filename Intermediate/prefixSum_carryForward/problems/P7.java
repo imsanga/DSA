@@ -1,6 +1,6 @@
 package Intermediate.prefixSum_carryForward.problems;
 
-// special index - after removing the element, sum of even = sum of odd
+// special index - after removing the element, sum of even indexed elements == sum of odd indexed elements
 
 // tc - O(N)
 public class P7 {

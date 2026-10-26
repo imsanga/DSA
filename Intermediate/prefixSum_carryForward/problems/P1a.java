@@ -80,8 +80,8 @@ public class P1 {
 */
 
 // optimised approach
-// tc - O(N)
-// sc - O(1)
+// tc - O(N+Q)
+// sc - O(N)
 public class P1a {
     public long[] rangeSum(int[] A, int[][] B) {
 

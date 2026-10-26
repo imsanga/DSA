@@ -1,4 +1,4 @@
-package Intermediate.slidingWindow_contribution;
+package Intermediate.slidingWindow_contribution.problems;
 
 /*
 # Problem: Subarray with Least Average
@@ -47,7 +47,7 @@ B = 2
 */
 
 // tc: O(N)
-public class P5 {
+public class P3 {
     public int solve(int[] A, int B) {
         int n = A.length;
 
