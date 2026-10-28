@@ -54,6 +54,22 @@ A = [2, 4, 1]
 
 0
 
+---
+
+## Example Explanation
+
+### Explanation 1
+
+We can reorder the elements as `[1, 3, 5]` or `[5, 3, 1]`, with consecutive differences of `2` and `-2`, respectively.
+
+Therefore, the output is `1`.
+
+### Explanation 2
+
+There is no way to reorder the elements to obtain an arithmetic progression.
+
+Therefore, the output is `0`.
+
 */
 
 import java.util.*;
@@ -67,9 +83,11 @@ public class P3 {
 
         // iterate the Arrays
         // arithmetic progression: a, a+d, a+2d
+        // common differnce d = a[1] - a[0]
+
         int cd = A[1] - A[0];
-        for (int i = 0; i < n - 1; i++) {
-            if (A[i + 1] - A[i] != cd)
+        for (int i = 2; i < n; i++) {
+            if (A[i] - A[i - 1] != cd)
                 return 0;
         }
 

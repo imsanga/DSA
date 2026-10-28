@@ -4,6 +4,10 @@ A -> 65
 a -> 97
 0 -> 48
 
+General topics
+------------
+-> Java automatically converts char to int during arithmetic, comparison and assignment operations
+
 char[] → String
 new String(arr)
 String.valueOf(arr)

@@ -61,20 +61,23 @@ A = "this is ib"
 
 public class P8 {
     public String solve(String A) {
+        // -> trim() is used to remove space in begin and end of the string
 
-        StringBuilder sb = new StringBuilder();
-        int n = A.length();
-        int temp = n;
+        // -> split("\\s+") is used for splitting a string whenever it encounters one or
+        // more consecutive whitespace characters and stores in array
+
+        String[] temp = A.trim().split("\\s+");
+        int n = temp.length;
+
+        StringBuilder ans = new StringBuilder();
+
         for (int i = n - 1; i >= 0; i--) {
-            if (A.charAt(i) == ' ' && i > 0 && A.charAt(i - 1) != ' ') {
-                sb.append(A.substring(i + 1, temp).trim());
-                sb.append(' ');
-                temp = i;
-            } else if (i == 0) {
-                sb.append(A.substring(i, temp).trim());
-            }
+            ans.append(temp[i]);
+
+            if (i != 0)
+                ans.append(" ");
         }
 
-        return sb.toString().trim();
+        return ans.toString();
     }
 }

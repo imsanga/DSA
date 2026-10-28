@@ -4,35 +4,73 @@ package Intermediate.string;
 # Problem: Toggle Case
 
 ## Problem Description
-Given a character string A containing only lowercase and uppercase English letters, toggle the case of every character.
+
+You are given a character string `A` of length `N`, consisting only of lowercase and uppercase Latin letters.
+
+Toggle the case of each character in string `A`.
 
 For example:
-- 'A' becomes 'a'
-- 'a' becomes 'A'
-- 'E' becomes 'e'
-- 'e' becomes 'E'
+- `'A'` changes to `'a'`.
+- `'e'` changes to `'E'`.
+
+---
+
+## Problem Constraints
+
+- `1 <= N <= 10^5`
+- `A[i]` belongs to `['a'-'z', 'A'-'Z']`.
 
 ---
 
 ## Input Format
-The first and only input is a character string A.
+
+The first and only argument is a character string `A`.
 
 ---
 
 ## Output Format
-Return the string after toggling the case of every character.
+
+Return a character string after toggling the case of every character.
 
 ---
 
 ## Example Input
 
+### Input 1
+
 A = "Hello"
+
+### Input 2
+
+A = "tHiSiSaStRiNg"
 
 ---
 
 ## Example Output
 
-hELLO
+### Output 1
+
+"hELLO"
+
+### Output 2
+
+"ThIsIsAsTrInG"
+
+---
+
+## Example Explanation
+
+### Explanation 1
+
+- `'H'` changes to `'h'`.
+- `'e'` changes to `'E'`.
+- `'l'` changes to `'L'`.
+- `'l'` changes to `'L'`.
+- `'o'` changes to `'O'`.
+
+### Explanation 2
+
+The string `"tHiSiSaStRiNg"` changes to `"ThIsIsAsTrInG"`.
 
 */
 
