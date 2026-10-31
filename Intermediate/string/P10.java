@@ -58,18 +58,21 @@ A = ["abab", "ab", "abcd"]
 public class P10 {
     public String longestCommonPrefix(String[] A) {
         int n = A.length;
-        int x = A[0].length(); // long common prefix
+        String initial = A[0];
 
+        int x = initial.length();
         for (int i = 1; i < n; i++) {
-            if (A[i].length() < x)
-                x = A[i].length();
-            int temp = 0;
+            String temp = A[i];
+            if (temp.length() < x) {
+                x = temp.length();
+            }
 
+            int tempy = 0;
             for (int j = 0; j < x; j++) {
-                if (A[0].charAt(j) == A[i].charAt(j)) {
-                    temp++;
+                if (initial.charAt(j) == temp.charAt(j)) {
+                    tempy++;
                 } else {
-                    x = temp;
+                    x = tempy;
                     if (x == 0)
                         return "";
                     break;
@@ -77,6 +80,6 @@ public class P10 {
             }
         }
 
-        return A[0].substring(0, x);
+        return initial.substring(0, x);
     }
 }

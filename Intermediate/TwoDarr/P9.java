@@ -5,7 +5,7 @@ public class P9 {
         int n = A.length;
         int countTriplets = 0;
 
-        // take middle annd calculate left and right count
+        // take middle and calculate left and right count
         for (int i = 0; i < n; i++) {
             int leftCount = 0;
             int rightCount = 0;
