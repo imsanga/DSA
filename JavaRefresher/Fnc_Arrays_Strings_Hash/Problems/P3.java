@@ -45,7 +45,7 @@ public class P3 {
     public String solve(String A) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < A.length(); i++) {
-            int temp = A.charAt(i) - 97 + 1;
+            int temp = A.charAt(i) - 'a' + 1;
             sb.append(A.charAt(i) + "" + temp);
         }
         return sb.toString();

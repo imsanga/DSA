@@ -1,53 +1,51 @@
 package JavaRefresher.Exam;
 
 /*
- * # Problem: Two Sum
- * 
- * ## Problem Description
- * Given an integer array A and an integer B, determine whether there exists a
- * pair of distinct elements whose sum is equal to B.
- * 
- * The same array element cannot be used twice.
- * 
- * Return 1 if such a pair exists; otherwise, return 0.
- * 
- * ---
- * 
- * ## Input Format
- * - The first input is an integer array A.
- * - The second input is an integer B.
- * 
- * ---
- * 
- * ## Output Format
- * Return 1 if there exists a pair of elements whose sum is equal to B;
- * otherwise, return 0.
- * 
- * ---
- * 
- * ## Example Input
- * 
- * A = [2, 3, 1]
- * B = 3
- * 
- * ---
- * 
- * ## Example Output
- * 
- * 1
- * 
- */
+# Problem: Reward Students
+
+## Problem Description
+Given an integer array A representing the scores of students, find the highest and second-highest scores and return their sum.
+
+If the highest score appears more than once, it can also be considered as the second-highest score.
+
+---
+
+## Input Format
+The first and only input is an integer array A.
+
+---
+
+## Output Format
+Return a single integer representing the sum of the highest and second-highest scores.
+
+---
+
+## Example Input
+
+A = [2, 3, 4, 2]
+
+---
+
+## Example Output
+
+7
+
+*/
 
 public class P1 {
-    public int solve(int[] A, int B) {
+    public int solve(int[] A) {
+        int max = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
 
-        for (int i = 0; i < A.length - 1; i++) {
-            for (int j = i + 1; j < A.length; j++) {
-                if (A[i] + A[j] == B)
-                    return 1;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] >= max) {
+                secondMax = max;
+                max = A[i];
+            } else if (A[i] > secondMax) {
+                secondMax = A[i];
             }
         }
-        return 0;
 
+        return max + secondMax;
     }
 }

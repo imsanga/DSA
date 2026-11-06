@@ -40,6 +40,13 @@ public class loops {
             i++;
         } while (i <= 10);
 
+        /*
+         * break vs continue vs return
+         * break -> Exit the loop
+         * continue -> Skip the current iteration
+         * return -> Exit the method
+         */
+
         // break & continue statement
         for (int y = 1; y <= 10; y++) {
             if (y == 8) {

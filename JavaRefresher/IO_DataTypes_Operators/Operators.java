@@ -54,5 +54,23 @@ public class Operators {
 
         // ternary -> condition ? trueStatement : falseStatement
         System.out.println(logical1 > logical2 ? "sanga" : "dhoni"); // sanga
+
+        // if any one of the operand is string with + it concatenates
+        // apart from + any other operator will give an error
+        System.out.println("Hello" + "World!"); // HelloWorld!
+        System.out.println(5 + " World!"); // 5 World!
+        System.out.println("Hello " + 5); // Hello 5
+
+        // Java evaluates expressions from left to right, but the meaning of + changes:
+        // number + number -> arithmetic addition
+        // String + anything -> string concatenation
+        System.out.println(7 + 1 + "856"); // 8856
+        System.out.println("856" + 7 + 1); // 85671
+
+        // bracket is having higher priority
+        System.out.println("856" + (7 + 1)); // 8568
+        // "856" + (7+1)
+        // "856" + 8
+        // 8568
     }
 }

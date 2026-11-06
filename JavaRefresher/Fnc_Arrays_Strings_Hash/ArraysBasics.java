@@ -2,7 +2,9 @@ package JavaRefresher.Fnc_Arrays_Strings_Hash;
 
 // Arrays - single variable can hold more than one value of same data type
 
-public class Arrays {
+import java.util.*;
+
+public class ArraysBasics {
     public static void main(String[] args) {
 
         // *** 1d array ***
@@ -24,6 +26,10 @@ public class Arrays {
         for (int i : arr)
             System.out.println(i);
 
+        // Compare 2 arrays
+        int[] arr0 = { 1, 2, 3, 4, 5 };
+        System.out.println(Arrays.equals(arr, arr0));
+
         // *** 2d array (array of arrays) ***
 
         // 1. Specify size
@@ -43,6 +49,9 @@ public class Arrays {
 
         // 4. Empty array
         int[][] arr4 = new int[0][0];
+
+        // Compare 2 arrays
+        System.out.println(Arrays.deepEquals(arr2, arr3));
 
         // example
         int[][] arr2d = { { 1 }, { 1, 2 }, { 1, 2, 3 } };

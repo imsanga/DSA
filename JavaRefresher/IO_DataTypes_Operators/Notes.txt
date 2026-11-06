@@ -1,0 +1,62 @@
+Compile time vs Run time
+=> java compile time - converts source code to byte code
+=> java run time - byte code is converted to machine code by jvm and runs the machine code and gives the output
+
+JDK
+--> java development kit
+--> jdk is a package where we can develop java applications; inside that jre, jvm is present
+JRE
+--> java runtime environment
+--> contains jvm + libraries to run java programs
+JVM
+--> java virtual machine
+--> it converts bytecode into machine code
+
+Memory Model
+--> Stack memory - stores primitive data type values and references of objects
+--> Heap memory - stores the actual objects and their data
+
+Comments
+// Sanga (single line comment)
+/*
+    Multi line comments
+    Virat
+    Dhoni
+    Sachin
+*/
+
+bigger type is the type of the result
+    byte
+    ↓
+    short
+    ↓
+    char
+    ↓
+    int
+    ↓
+    long
+    ↓
+    float
+    ↓  
+    double  
+
+
+### Java Operator Precedence (Higher → Lower)
+
+| Priority | Operators                  | Meaning
+
+| 1 |       `()`, `[]`, `.`             | Parentheses, array access, member access
+| 2 |       `++`, `--`, `!`, `~`        | Unary operators
+| 3 |       `*`, `/`, `%`               | Multiplication, division, modulus
+| 4 |       `+`, `-`                    | Addition, subtraction
+| 5 |       `<`, `>`, `<=`, `>=`        | Relational
+| 6 |       `==`, `!=`                  | Equality
+| 7 |       `&&`                        | Logical AND
+| 8 |       `||`                        | Logical OR
+| 9 |       `?:`                        | Ternary
+| 10 |      `=`, `+=`, `-=`             | Assignment
+
+        
+
+
+

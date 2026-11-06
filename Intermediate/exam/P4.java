@@ -122,7 +122,7 @@ public class P4 {
             int left = B[i][0];
             int right = B[i][1];
 
-            if (left == 0)
+            if (left == 1)
                 ans[i] = pfx[right];
             else {
                 ans[i] = pfx[right] - pfx[left - 1];

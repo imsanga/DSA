@@ -1,12 +1,14 @@
 package JavaRefresher.Exam;
 
 /*
-# Problem: Reward Students
+# Problem: Check if Array is Sorted
 
 ## Problem Description
-Given an integer array A representing the scores of students, find the highest and second-highest scores and return their sum.
+Given an integer array A, determine whether it is sorted in non-decreasing order.
 
-If the highest score appears more than once, it can also be considered as the second-highest score.
+A non-decreasing order means each element is greater than or equal to the previous element.
+
+Return 1 if the array is sorted; otherwise, return 0.
 
 ---
 
@@ -16,36 +18,30 @@ The first and only input is an integer array A.
 ---
 
 ## Output Format
-Return a single integer representing the sum of the highest and second-highest scores.
+Return 1 if the array is sorted in non-decreasing order; otherwise, return 0.
 
 ---
 
 ## Example Input
 
-A = [2, 3, 4, 2]
+A = [1, 2, 2]
 
 ---
 
 ## Example Output
 
-7
+1
 
 */
 
 public class P3 {
     public int solve(int[] A) {
-        int max = Integer.MIN_VALUE;
-        int secondMax = Integer.MIN_VALUE;
 
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] >= max) {
-                secondMax = max;
-                max = A[i];
-            } else if (A[i] > secondMax) {
-                secondMax = A[i];
-            }
+        for (int i = 0; i < A.length - 1; i++) {
+            if (A[i + 1] < A[i])
+                return 0;
         }
 
-        return max + secondMax;
+        return 1;
     }
 }

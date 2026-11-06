@@ -71,15 +71,14 @@ public class P3 {
     public static void main(String[] args) {
         int[] arr = { 4, 1, 10, 15 };
 
-        int count = 0;
-        int n = arr.length, maxy = 0;
+        int n = arr.length, maxy = 0, temp = 0;
 
         for (int i = 0; i < n; i++) {
             if (arr[i] % 4 == 0 || arr[i] % 5 == 0) {
-                count++;
-                maxy = Math.max(maxy, count);
+                temp++;
+                maxy = Math.max(maxy, temp);
             } else {
-                count = 0;
+                temp = 0;
             }
         }
 

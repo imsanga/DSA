@@ -32,6 +32,9 @@ public class Hashmap {
         // check key
         System.out.println(l1.containsKey(3));
 
+        // check values
+        System.out.println(l1.containsValue("Sanga"));
+
         // size of map
         System.out.println(l1.size());
 

@@ -1,12 +1,12 @@
 package JavaRefresher.Exam;
 
 /*
-# Problem: Reverse Given Array
+# Problem: Tom's Mathematical Operation
 
 ## Problem Description
-Given an integer array A, reverse the elements of the array and return the reversed array.
+Given an integer array A, find the sum of all elements that are present at odd indices.
 
-The reversal should be done by swapping elements from the beginning and the end of the array until the entire array is reversed.
+Note: Use 0-based indexing.
 
 ---
 
@@ -16,31 +16,30 @@ The first and only input is an integer array A.
 ---
 
 ## Output Format
-Return the reversed array.
+Return a single integer representing the sum of all elements at odd indices.
 
 ---
 
 ## Example Input
 
-A = [2, 1, 3]
+A = [2, 1, 3, 5]
 
 ---
 
 ## Example Output
 
-[3, 1, 2]
+6
 
 */
-import java.util.*;
 
 public class P2 {
-    public ArrayList<Integer> solve(ArrayList<Integer> A) {
-        ArrayList<Integer> al = new ArrayList<>();
+    public int solve(int[] A) {
+        int ans = 0;
 
-        for (int i = A.size() - 1; i >= 0; i--) {
-            al.add(A.get(i));
+        for (int i = 1; i < A.length; i += 2) {
+            ans += A[i];
         }
 
-        return al;
+        return ans;
     }
 }

@@ -1,4 +1,4 @@
-package JavaRefresher.Exam;
+package JavaRefresher.Lab_Session_Patterns;
 
 /*
 # Problem: Number Pattern - Butterfly Pattern
@@ -54,7 +54,7 @@ Print the butterfly number pattern consisting of (2 × N - 1) rows.
 
 */
 
-public class P8 {
+public class P15 {
     public static void main(String[] args) {
         int n = 5, temp1 = n;
 

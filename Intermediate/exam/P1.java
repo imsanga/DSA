@@ -83,22 +83,28 @@ public class P1 {
 
         int al = A.length();
         int bl = B.length();
-        boolean flag = false;
 
+        // iterate string A and store the frequency
         HashMap<Character, Integer> hm = new HashMap<>();
 
-        // add frequency for string A
         for (int i = 0; i < al; i++) {
             char ch = A.charAt(i);
             hm.put(ch, hm.getOrDefault(ch, 0) + 1);
         }
 
-        // check frequency for string B in A
-        for (int i = 0; i < bl; i++) {
-            char ch = B.charAt(i);
+        // iterate string B and check it can be formed by string A
+        boolean flag = false;
 
-            if (hm.containsKey(ch) && hm.get(ch) > 0) {
+        for (int j = 0; j < bl; j++) {
+            char ch = B.charAt(j);
+
+            if (hm.containsKey(ch)) {
                 hm.put(ch, hm.get(ch) - 1);
+
+                if (hm.get(ch) < 0) {
+                    flag = true;
+                    break;
+                }
             } else {
                 flag = true;
                 break;
@@ -106,9 +112,10 @@ public class P1 {
         }
 
         if (flag) {
-            System.out.println(0);
-        } else
-            System.out.println(1);
+            System.out.println("0");
+        } else {
+            System.out.println("1");
+        }
 
     }
 }
