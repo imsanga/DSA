@@ -56,6 +56,18 @@ note:
 --> transpose of matrix = columns * rows
 --> use .equals instead of == for wrapper classes
 
+Common Methods
+--------------
+Arrays.toString(arr1) // 1d array
+Arrays.equals(arr1, arr2) // 1d array
+Arrays.fill(arr, 5); // fills the array (eg: fills with element 5 in all index)
+Arrays.copyOf(arr, 2); // copys the part of array (eg: copy arr of 2 elements)
+Arrays.binarySearch(arr, 30) // Searches for an element in a sorted array and returns its index
+Arrays.asList(arr) // it converts array to list
+
+Arrays.deepToString(arr1) // 2d array
+Arrays.deepEquals(arr1, arr2) // 2d array
+
 *******************
 
 ArrayList
@@ -67,13 +79,17 @@ ArrayList
 
 Common Methods
 --------------
-add(element)
-get(index)
-set(index, value)
-remove(index)
-size()
-contains(element)
-clear()
+add(element)                        // Create / append element
+get(index)                          // Read element
+set(index, value)                   // Update element
+remove(index)                       // Delete element at index
+size()                              // Number of elements
+contains(element)                   // Checks whether element exists
+clear()                             // Removes all elements
+isEmpty()                           // Checks whether list is empty
+indexOf(element)                    // First occurrence index (-1 if absent)
+lastIndexOf(element)                // Last occurrence index (-1 if absent)
+remove(Integer.valueOf(element))    // Removes first matching element by value
 
 Traversal
 ---------
@@ -212,6 +228,8 @@ containsValue(value)
 size()
 keySet()
 values()
+clear()
+iSEmpty()
 
 Applications
 ------------
@@ -241,6 +259,7 @@ remove()
 contains()
 size()
 clear()
+iSEmpty()
 
 Traversal
 ---------

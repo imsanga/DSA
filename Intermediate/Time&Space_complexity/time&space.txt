@@ -37,7 +37,7 @@ ans --> Big O(Iteration) - log base2 N
 why we ignore lower order terms ?
 -> when the input is large, comparing a lower order term will not majorily affect the growth of algorithm, so it is ignored.
 -> as the input increases, impact of lower order term decreases
--> eg: 100 * log base2 N + 2 -- where adding 2 not majorily affect the growth of algorithm
+-> eg: 100 * log base2 N + 2 -- where adding 2, will not majorily affect the growth of algorithm
 
 --------------
 why we ignore constant coefficients ? (constant coefficient is a number multiplied by a variable/term)
@@ -123,7 +123,7 @@ func(int N, int[] arr) { // 4 bytes + 4*N -- we ignore the parameter
 }
 
 8N^2 + 4 N + 16 => auxiliary space complexity is O(N^2)
-8N^2 + 8 N + 16 => total space complexity is O(N^2)
+8N^2 + 8 N + 20 => total space complexity is O(N^2)
 
 --------------
 Time complexity - how much time the given soln takes, we calculate it based on Big O
