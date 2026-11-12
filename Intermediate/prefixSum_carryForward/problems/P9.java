@@ -40,18 +40,15 @@ A = [1, 4, 5, 2, 4]
 public class P9 {
     public int maxProfit(final int[] A) {
         int n = A.length;
+        int min = Integer.MAX_VALUE, maxProfit = 0;
 
-        if (n <= 1)
-            return 0;
-
-        int maxPft = 0;
-        int min = A[0];
-        for (int i = 1; i < n; i++) {
-            int profit = A[i] - min;
-            maxPft = Math.max(maxPft, profit);
+        for (int i = 0; i < n; i++) {
             min = Math.min(min, A[i]);
+
+            int profit = A[i] - min;
+            maxProfit = Math.max(maxProfit, profit);
         }
 
-        return maxPft;
+        return maxProfit;
     }
 }
