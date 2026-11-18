@@ -38,17 +38,22 @@ A = [1, 4, 5, 2, 4]
 
 // tc - O(N)
 public class P9 {
-    public int maxProfit(final int[] A) {
-        int n = A.length;
-        int min = Integer.MAX_VALUE, maxProfit = 0;
+    public int maxProfit(int[] prices) {
+        int n = prices.length;
 
-        for (int i = 0; i < n; i++) {
-            min = Math.min(min, A[i]);
+        if (n <= 1)
+            return 0;
 
-            int profit = A[i] - min;
+        int min = prices[0];
+        int maxProfit = 0;
+
+        for (int i = 1; i < n; i++) {
+            int profit = prices[i] - min;
             maxProfit = Math.max(maxProfit, profit);
+            min = Math.min(min, prices[i]);
         }
 
         return maxProfit;
+
     }
 }

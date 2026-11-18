@@ -101,17 +101,14 @@ public class P6 {
             A /= 10;
         }
 
-        // use carryforward and multiply and store
-        ArrayList<Integer> az = new ArrayList<>();
-        for (int i = 0; i < al.size(); i++) {
+        HashSet<Integer> hs = new HashSet<>();
+        for (int i = al.size() - 1; i >= 0; i--) {
             int sum = 1;
-            for (int j = i; j < al.size(); j++) {
+            for (int j = i; j >= 0; j--) {
                 sum *= al.get(j);
-                if (az.contains(sum))
+                if (hs.contains(sum))
                     return 0;
-                else {
-                    az.add(sum);
-                }
+                hs.add(sum);
             }
         }
 

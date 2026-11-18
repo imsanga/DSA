@@ -1,6 +1,6 @@
 package Intermediate.slidingWindow_contribution;
 
-// max subarray with length k
+// max subarray sum with length k
 
 /*
 
@@ -12,7 +12,7 @@ public class P2 {
         int k = 5;
 
         int maxSubarraySum = 0;
-        for (int i = 0; i < n - k + 1; i++) {
+        for (int i = 0; i <= n - k; i++) {
             int sum = 0;
             for (int j = i; j < i + k; j++) {
                 sum += arr[j];
@@ -41,7 +41,7 @@ public class SlidingWindow {
 
         // iterate the array
         int maxSubarraySum = sum;
-        for (int j = 1; j < n - k + 1; j++) {
+        for (int j = 1; j <= n - k; j++) {
             sum = sum - arr[j - 1] + arr[j + k - 1];
             // if(sum > maxSubarraySum) maxSubarraySum = sum;
             maxSubarraySum = Math.max(sum, maxSubarraySum);

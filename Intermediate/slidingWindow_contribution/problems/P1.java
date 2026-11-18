@@ -78,7 +78,7 @@ public class P1 {
         if (sum == C)
             return 1;
 
-        for (int j = 1; j < n - B + 1; j++) {
+        for (int j = 1; j <= n - B; j++) {
             sum = sum - A[j - 1] + A[j + B - 1];
             if (sum == C)
                 return 1;

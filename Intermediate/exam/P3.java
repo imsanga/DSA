@@ -67,18 +67,20 @@ There is no contiguous subarray satisfying the condition. Hence, the output is `
 
 */
 
+// note: Longest valid contiguous sequence + individual element condition + invalid element breaks sequence → Think Carry Forward with Counter
+
 public class P3 {
     public static void main(String[] args) {
         int[] arr = { 4, 1, 10, 15 };
 
-        int n = arr.length, maxy = 0, temp = 0;
+        int n = arr.length, maxy = 0, currentLength = 0;
 
         for (int i = 0; i < n; i++) {
             if (arr[i] % 4 == 0 || arr[i] % 5 == 0) {
-                temp++;
-                maxy = Math.max(maxy, temp);
+                currentLength++;
+                maxy = Math.max(maxy, currentLength);
             } else {
-                temp = 0;
+                currentLength = 0;
             }
         }
 

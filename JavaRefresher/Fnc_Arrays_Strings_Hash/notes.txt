@@ -153,6 +153,7 @@ toUpperCase()
 toLowerCase()
 startsWith(prefix)
 endsWith(suffix)
+isEmpty()
 
 Comparison
 ----------
@@ -186,11 +187,12 @@ insert(index, value)
 delete(startIndex, endIndex)
 deleteCharAt(index)
 replace(startIndex, endIndex, "text")
+setCharAt(index, 'c')
 reverse()
 charAt(index)
-setCharAt(index, 'c')
 length()
 toString()
+isEmpty() // (java 15+ version)
 
 Difference
 ----------
@@ -229,7 +231,7 @@ size()
 keySet()
 values()
 clear()
-iSEmpty()
+isEmpty()
 
 Applications
 ------------
@@ -259,7 +261,7 @@ remove()
 contains()
 size()
 clear()
-iSEmpty()
+isEmpty()
 
 Traversal
 ---------
