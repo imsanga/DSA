@@ -84,7 +84,7 @@ public class P5 {
 
             if (flag) {
                 for (int k = 0; k < m; k++) {
-                    if (A[k][i] != 0) {
+                    if (A[k][i] != 0 && A[k][i] != -1) {
                         A[k][i] = -1;
                     }
                 }

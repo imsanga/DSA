@@ -40,6 +40,10 @@ A = [
 
 */
 
+// note: 
+// n*m method - can be used for rectangular matrix
+// swap method - can be used for square matrix
+
 public class P6 {
     public int[][] solve(int[][] A) {
         int m = A.length;

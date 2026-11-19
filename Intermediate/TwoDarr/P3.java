@@ -16,7 +16,7 @@ public class P3 {
 
         for (int i = 0; i < n; i++) {
             diagonalSum += mat[i][i];
-            antiDiagonalSum += mat[i][n - i - 1];
+            antiDiagonalSum += mat[i][n - 1 - i];
         }
 
         System.out.println("Diagonal Sum -> " + diagonalSum);

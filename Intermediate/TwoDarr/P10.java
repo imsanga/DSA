@@ -75,11 +75,10 @@ import java.util.Arrays;
 
 public class P10 {
     public void solve(int[][] A) {
-        int m = A.length;
-        int n = A[0].length;
+        int n = A.length;
 
         // transpose the matrix by swap
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 int temp = A[i][j];
                 A[i][j] = A[j][i];
@@ -88,7 +87,7 @@ public class P10 {
         }
 
         // reverse each row
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < n; i++) {
             int start = 0, end = n - 1;
             while (start < end) {
                 int temp = A[i][start];
