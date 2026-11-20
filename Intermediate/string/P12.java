@@ -70,6 +70,7 @@ public class P12 {
             return n;
 
         for (int i = 0; i < n; i++) {
+            int currentLength = 0;
             if (A.charAt(i) == '0') {
                 int left = i - 1, right = i + 1;
                 int leftCount = 0, rightCount = 0;
@@ -86,10 +87,10 @@ public class P12 {
                     rightCount++;
                 }
 
-                int currentLength = leftCount + rightCount;
-
-                if (currentLength < countOne) {
-                    currentLength++;
+                if (leftCount + rightCount == countOne) {
+                    currentLength = leftCount + rightCount;
+                } else {
+                    currentLength = leftCount + rightCount + 1;
                 }
 
                 maxy = Math.max(maxy, currentLength);

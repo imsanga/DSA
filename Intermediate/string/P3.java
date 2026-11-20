@@ -40,22 +40,18 @@ A = "aaaabaaa"
 public class P3 {
     public String longestPalindrome(String A) {
         int n = A.length();
-        int maxLength = 0, tempLeft = 0, tempRight = n + 1;
+        int maxLength = 0, start = 0;
 
-        // 1 center
+        // odd - 1 char center
         for (int i = 0; i < n; i++) {
             int left = i, right = i;
 
-            while (left >= 0 && right < n) {
-                if (A.charAt(left) != A.charAt(right))
-                    break;
-                else {
-                    int length = right - left + 1;
-                    if (length > maxLength) {
-                        maxLength = length;
-                        tempLeft = left;
-                        tempRight = right + 1;
-                    }
+            while (left >= 0 && right < n && A.charAt(left) == A.charAt(right)) {
+                int length = right - left + 1;
+
+                if (length > maxLength) {
+                    start = left;
+                    maxLength = length;
                 }
 
                 left--;
@@ -63,20 +59,16 @@ public class P3 {
             }
         }
 
-        // 2 center
-        for (int i = 0; i < n - 1; i++) {
+        // even - 2 char center
+        for (int i = 0; i < n; i++) {
             int left = i, right = i + 1;
 
-            while (left >= 0 && right < n) {
-                if (A.charAt(left) != A.charAt(right))
-                    break;
-                else {
-                    int length = right - left + 1;
-                    if (length > maxLength) {
-                        maxLength = length;
-                        tempLeft = left;
-                        tempRight = right + 1;
-                    }
+            while (left >= 0 && right < n && A.charAt(left) == A.charAt(right)) {
+                int length = right - left + 1;
+
+                if (length > maxLength) {
+                    start = left;
+                    maxLength = length;
                 }
 
                 left--;
@@ -84,6 +76,6 @@ public class P3 {
             }
         }
 
-        return A.substring(tempLeft, tempRight);
+        return A.substring(start, start + maxLength);
     }
 }

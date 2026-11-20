@@ -63,8 +63,9 @@ public class P8 {
     public String solve(String A) {
         // -> trim() is used to remove space in begin and end of the string
 
-        // -> split("\\s+") is used for splitting a string whenever it encounters one or
-        // more consecutive whitespace characters and stores in array
+        // \\s → splits at one whitespace character at a time.
+        // \\s+ → matches one or more consecutive whitespace characters as a single
+        // delimiter
 
         String[] temp = A.trim().split("\\s+");
         int n = temp.length;

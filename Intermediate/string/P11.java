@@ -59,7 +59,7 @@ public class P11 {
                     rightCount++;
                 }
 
-                int currentLength = leftCount + 1 + rightCount;
+                int currentLength = leftCount + rightCount + 1;
 
                 maxy = Math.max(maxy, currentLength);
             }

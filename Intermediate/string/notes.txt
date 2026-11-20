@@ -6,7 +6,7 @@ a -> 97
 
 General topics
 ------------
--> Java automatically converts char to int during arithmetic, comparison and assignment operations
+-> Java automatically converts char to int during arithmetic, relational and assignment operations
 
 char[] → String
 new String(arr)
