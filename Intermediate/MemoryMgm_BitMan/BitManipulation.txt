@@ -198,7 +198,7 @@ NOT (~) - Flips every bit
   ------
     0011
 
-9. NEGATIVE NUMBERS — 2'S COMPLEMENT
+9. NEGATIVE NUMBERS — 2'S COMPLEMENT (Binary representation for negative numbers)
 ------------------------------------------------------------
 To represent a negative number:
 

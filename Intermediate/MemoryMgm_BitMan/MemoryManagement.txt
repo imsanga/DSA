@@ -70,6 +70,10 @@ void fun() {
 Java is pass-by-value.
 A copy of the value is passed to a method.
 
+note:
+Primitive datatypes : Java copies the primitive value.
+Reference datatypes : Java copies the reference address.
+
 10. ARRAY PASSING
 -----------------
 Java passes the array reference by value.
