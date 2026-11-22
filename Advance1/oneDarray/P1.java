@@ -6,8 +6,13 @@ package Advance1.oneDarray;
 // prefix sum - tc: O(N^2) & sc: O(N)
 // carry forward - tc: O(N^2) & sc: O(1)
 
+// note:
+// if all elements are +ive, sum of all elements is the max subarray sum
+// if all elements are -ive, maximum element is the maximum subarray sum
+
+// if all elemnts are mixed use kadane's algorithm (It also works for all-positive and all-negative arrays)
 // Kadane's Algorithm - tc: O(N) & sc: O(1)
-// It decides whether to extend the existing subarray or start fresh at each element.
+// It decides whether to extend the existing subarray or start a new subarray at the current element.
 
 /*
 # Problem: Max Sum Contiguous Subarray
@@ -72,46 +77,52 @@ public class Main {
         int[] A = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
 
         int n = A.length;
-        int max = Integer.MIN_VALUE;
+        int maxSubArr = Integer.MIN_VALUE;
         int sum = 0, startIndex = -1, endIndex = -1, temp = -1;
 
         for (int i = 0; i < n; i++) {
-            if (sum == 0)
-                temp = i;
-            sum += A[i];
-
-            if (sum > max) {
-                startIndex = temp;
-                endIndex = i;
-                max = sum;
+            if(sum == 0) {
+              temp = i;
             }
+
+            sum += A[i];
+            
+            if(sum > maxSubArr) {
+              maxSubArr = sum;
+              startIndex = temp;
+              endIndex = i;
+            }
+
             if (sum < 0) {
                 sum = 0;
             }
-
         }
 
-        System.out.println("max : " + max);
+        System.out.println("maxSubArr : " + maxSubArr);
         System.out.println("startIndex : " + startIndex);
-        System.out.println("endIndex : " + endIndex);
+        System.out.println("endIndex : " + endIndex); 
     }
 }
 
 */
 
+// tc - O(N)
+// sc - O(1)
 public class P1 {
     public int maxSubArray(final int[] A) {
         int n = A.length;
-        int max = Integer.MIN_VALUE;
+        int maxSubArr = Integer.MIN_VALUE;
         int sum = 0;
 
         for (int i = 0; i < n; i++) {
             sum += A[i];
-            max = Math.max(max, sum);
-            if (sum < 0)
+            maxSubArr = Math.max(maxSubArr, sum);
+
+            if (sum < 0) {
                 sum = 0;
+            }
         }
 
-        return max;
+        return maxSubArr;
     }
 }

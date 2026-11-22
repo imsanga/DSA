@@ -61,27 +61,29 @@ B = [[1, 2, 10],
 
 */
 
+// tc: O(Q+N)
+// sc: O(1)
 public class P2 {
     public int[] solve(int A, int[][] B) {
-        int nb = B.length;
+        int q = B.length;
+        int[] ans = new int[A];
 
-        // difference array
-        int[] diff = new int[A];
-        for (int i = 0; i < nb; i++) {
-            int start = B[i][0] - 1,
-                    end = B[i][1] - 1,
-                    coins = B[i][2];
+        // add donated amount for all queries
+        for (int i = 0; i < q; i++) {
+            int left = B[i][0], right = B[i][1], donated = B[i][2];
 
-            diff[start] += coins;
-            if (end < A - 1)
-                diff[end + 1] -= coins;
+            ans[left - 1] += donated;
+
+            if (right < A) {
+                ans[right] -= donated;
+            }
         }
 
-        // prefix sum off diff array
+        // prefix sum for ans array
         for (int i = 1; i < A; i++) {
-            diff[i] = diff[i - 1] + diff[i];
+            ans[i] = ans[i - 1] + ans[i];
         }
 
-        return diff;
+        return ans;
     }
 }
