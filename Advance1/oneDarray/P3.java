@@ -59,42 +59,38 @@ A = [[2, 10], [4, 9], [6, 7]]
 
 import java.util.*;
 
+// tc: O(n)
+// sc: O(n)
 public class P3 {
     public ArrayList<ArrayList<Integer>> solve(ArrayList<ArrayList<Integer>> A) {
         int n = A.size();
-
-        int start = A.get(0).get(0);
-        int end = A.get(0).get(1);
+        int start1 = A.get(0).get(0);
+        int end1 = A.get(0).get(1);
 
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
 
-        if (n == 1) {
-            ArrayList<Integer> al = new ArrayList<>();
-            al.add(start);
-            al.add(end);
-            ans.add(al);
-        } else {
-            for (int i = 1; i < n; i++) {
-                int tempStart = A.get(i).get(0);
-                int tempEnd = A.get(i).get(1);
+        for (int i = 1; i < n; i++) {
+            int start2 = A.get(i).get(0), end2 = A.get(i).get(1);
 
-                if (tempStart <= end) {
-                    end = Math.max(end, tempEnd);
-                } else {
-                    ArrayList<Integer> al = new ArrayList<>();
-                    al.add(start);
-                    al.add(end);
-                    ans.add(al);
-                    start = tempStart;
-                    end = tempEnd;
-                }
+            if (start2 <= end1) {
+                end1 = Math.max(end1, end2);
+            } else {
+                ArrayList<Integer> temp = new ArrayList<>();
+
+                temp.add(start1);
+                temp.add(end1);
+                ans.add(temp);
+
+                start1 = start2;
+                end1 = end2;
             }
-
-            ArrayList<Integer> ak = new ArrayList<>();
-            ak.add(start);
-            ak.add(end);
-            ans.add(ak);
         }
+
+        ArrayList<Integer> temp = new ArrayList<>();
+
+        temp.add(start1);
+        temp.add(end1);
+        ans.add(temp);
 
         return ans;
     }
