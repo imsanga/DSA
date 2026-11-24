@@ -88,6 +88,8 @@ Now, all elements less than or equal to 20 are together.
 
 */
 
+// tc - O(N)
+// sc - O(1)
 public class P4 {
     public int solve(int[] A, int B) {
         int n = A.length;
