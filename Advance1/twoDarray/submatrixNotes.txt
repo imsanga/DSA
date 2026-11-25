@@ -1,0 +1,152 @@
+## 1. What is a Submatrix?
+- A submatrix is a continuous rectangular portion of a 2D matrix.
+- Rows must be continuous.
+- Columns must be continuous.
+
+## 2. Total Number of Submatrices
+
+For an N × M matrix:
+
+Total = [N × (N+1) / 2] × [M × (M+1) / 2]
+
+For an N × N matrix:
+
+Total = [N × (N+1) / 2]²
+
+## 3. Generate All Possible Submatrices – 4 Loops
+
+Remember:
+
+- First 2 loops → Starting position.
+- Next 2 loops → Ending position.
+
+code:
+for (int r1 = 0; r1 < n; r1++) {
+    for (int c1 = 0; c1 < m; c1++) {
+
+        for (int r2 = r1; r2 < n; r2++) {
+            for (int c2 = c1; c2 < m; c2++) {
+
+                // One submatrix selected
+
+            }
+        }
+    }
+}
+
+### Variable meaning
+
+Variable | Meaning
+r1 | Starting row
+c1 | Starting column
+r2 | Ending row
+c2 | Ending column
+
+### Important ranges to remember
+
+r1: 0 to n-1
+c1: 0 to m-1
+r2: r1 to n-1
+c2: c1 to m-1
+
+## 4. Traverse a Selected Submatrix – 2 Loops
+
+Remember: Normal 2D array traversal, but restricted to the selected boundaries.
+
+code:
+for (int i = r1; i <= r2; i++) {
+    for (int j = c1; j <= c2; j++) {
+
+        // Access A[i][j]
+
+    }
+}
+
+i: r1 to r2
+j: c1 to c2
+
+## 5. All 6 Loops Together
+
+code:
+for (int r1 = 0; r1 < n; r1++) {
+    for (int c1 = 0; c1 < m; c1++) {
+
+        for (int r2 = r1; r2 < n; r2++) {
+            for (int c2 = c1; c2 < m; c2++) {
+
+                // Traverse selected submatrix
+                for (int i = r1; i <= r2; i++) {
+                    for (int j = c1; j <= c2; j++) {
+
+                        // Process A[i][j]
+
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+## 6. Sum of All Submatrices – Contribution Technique
+
+For every element A[i][j]:
+
+Starting row choices = i + 1
+
+Ending row choices = N - i
+
+Starting column choices = j + 1
+
+Ending column choices = M - j
+
+Number of submatrices containing A[i][j]:
+
+(i+1) × (N-i) × (j+1) × (M-j)
+
+Contribution of A[i][j]:
+
+A[i][j] × (i+1) × (N-i) × (j+1) × (M-j)
+
+Final answer:
+
+Sum of contributions of all elements.
+
+### Java code
+
+long ans = 0;
+
+for (int i = 0; i < n; i++) {
+    for (int j = 0; j < m; j++) {
+
+        long count = (long)(i + 1) * (n - i)
+                   * (j + 1) * (m - j);
+
+        ans += A[i][j] * count;
+    }
+}
+
+
+## 7. Complexity
+
+Operation | Time Complexity
+Traverse every element of every submatrix | O(N³ × M³)
+Sum of all submatrices using contribution | O(N × M)
+
+Contribution technique auxiliary space: O(1)
+
+## 8. Final Memory Trick
+
+First 2 loops → START
+
+Next 2 loops → END
+
+Last 2 loops → TRAVERSE
+
+Contribution technique:
+
+1D → Starting × Ending
+
+2D → Starting row × Ending row × Starting column × Ending column
+
+**Always remember:** For submatrix traversal, the last two loops are simply normal 2D array traversal restricted to the selected boundaries.

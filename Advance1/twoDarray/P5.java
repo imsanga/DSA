@@ -81,7 +81,7 @@ Row 3 has the maximum number of 1s.
 
 */
 
-// tc - O(N)
+// tc - O(N+N)
 // sc - O(1)
 public class P5 {
     public int solve(int[][] A) {
